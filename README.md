@@ -40,7 +40,7 @@ Bienvenido a mi portfolio digital. Aquí encontrarás una selección de proyecto
 ## 🤝 Colaboraciones & contacto
 
 - 🌐 Sitio web: [tu‑sitio‑web.c
-- 💼 LinkedIn: [linkedin.com/in/aletorresprado](https://www.linkedin.com/in/alejandro-torres-prado)
+- 💼 LinkedIn: [linkedin.com/in/alejandro-torres-prado](https://www.linkedin.com/in/alejandro-torres-prado)
 
 ---
 
