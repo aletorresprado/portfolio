@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Ale Torres Prado</title>
+        <!--Fontawesome-->
+     <script src="https://kit.fontawesome.com/d24c1dd2ca.js" crossorigin="anonymous"
+    ></script>
+    <!---AOS-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"/>   
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+   
+  </head>  
+
+  <body class="bg-light">
+    <!---Navbar-->
+ <nav class="navbar navbar-light fixed-top bg-secondary shadow-sm">
+  <div class="container-lg">
+    <a href="/index.html" class="navbar-brand text-warning fw-bold fs-4">Alejandro Torres</a>
+   
+    <!-- Botón para alternar (ej: en el navbar) -->
+
+
+    <div class="dropdown">
+      <button class="btn btn-warning px-3" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+        
+      </button>
+     
+      <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+        <li><a href="#home" class="dropdown-item text-secondary">Home</a></li>
+        <li><a href="#acercade" class="dropdown-item text-secondary">Acerca de</a></li>
+        <li><a href="#servicios" class="dropdown-item text-secondary">Servicios</a></li>
+        <li><a href="#portfolio" class="dropdown-item text-secondary">Portfolio</a></li>
+        <li><a href="#resena" class="dropdown-item text-secondary">Resenas</a></li>
+        <li><a href="#contacto" class="dropdown-item text-secondary">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!---Home Section-->
+<section class="home py-5" id="home">
+    <div class="container-lg">
+
+        <div class="row min-vh-100 align-items-center align-content-center">
+            <!---Fila-->
+        <div class="col-md-6 mt-5 mt-md-0 d-flex justify-content-center align-content-center align-items-center">
+          <!--Imagen-->
+          <div class="home-img text-center" data-aos="zoom-in-down">
+            <img src="/img/atp.jpg" alt="icon-profile" class="img-fluid rounded-circle mw-100"/>
+          </div> 
+        </div>
+          
+        <div class="col-md-6 mt-5 mt-md-0 order-md-first">
+            <div class="home-text">
+              <p class="text-muted mb-1 text-secondary">👋 Hola soy Ale </p>
+              <h1 class="text-warning text-uppercase fs-1 fw-bold">
+                Desarrollador web
+              </h1>
+              <h2 class="fs-4 text-secondary">HTML5 | Css3 | Bootstrap5</h2>
+              <p class="mt-4 text-muted text-secondary">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates, provident. Unde mollitia dignissimos fuga, illo
+                veniam voluptas a error adipisci numquam? Libero nostrum
+                quisquam harum unde, dignissimos vero saepe sapiente!
+              </p>
+              <a href="#portfolio" class="btn btn-warning px-3">Mis trabajos</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!---About Section-->
+    <section class="about bg-white shadow-lg text-secondary" id="acercade"> 
+        <div class="container-lg py-5">
+
+         <div class="row justify-content-center">
+           <div class="col-lg-8">
+          <div class="section-title text-center ">
+          <h2 class="fw-bold mb-5">Acerca de mi</h2>
+        </div>
+    ` </div>    
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="about-text">
+          <h3 class="fs-4 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vero exercitationem repellendus assumenda magni sit molestias recusandae eius alias natus veniam, qui blanditiis tempora aspernatur esse id minus aliquam reprehenderit!</p>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="fact-item">
+              <h4 class="fs-1 fw-bold text-warning">100</h4>
+              <p class="text-muted">Proyectos completados</p>
+            </div>
+          </div>
+              <div class="col-sm-4">
+            <div class="fact-item">
+              <h4 class="fs-1 fw-bold text-warning">90</h4>
+              <p class="text-muted">Clientes Satisfechos</p>
+            </div>
+          </div>
+              <div class="col-sm-4">
+            <div class="fact-item">
+              <h4 class="fs-1 fw-bold text-warning">95</h4>
+              <p class="text-muted">Resenas Positivas</p>
+            </div>
+          </div>
+
+            </div>
+          <div class="row text-center text-uppercase my-3">
+              <div class="col-lg-12 d-flex align-items-center">
+                <a href="" class="btn btn-outline-warning me-5 px-3">Descargar Cv</a>
+                <div class="social-links">
+                  <a href="#" class="text-secondary me-2 fs-2"><i class="fab fa-github"></i></a>
+                  <a href="#" class="text-secondary me-2 fs-2"><i class="fab fa-linkedin"></i></a>
+                  <a href="#" class="text-secondary me-2 fs-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-secondary me-2 fs-2"><i class="fab fa-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+          
+      </div>
+       <div class="col-md-6 mt-5 mt-md-0">
+
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button  bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body text-secondary">
+        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body text-secondary">
+        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed  bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body text-secondary">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        Accordion Item #4
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+      <div class="accordion-body text-secondary">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+      <button class="accordion-button collapsed  bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+        Accordion Item #5
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+      <div class="accordion-body text-secondary">
+        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      </div>
+    </div>
+  </div>
+</div>
+       </div>
+
+    </div>
+</div>
+
+    </section>
+
+<!---Service Section-->
+<section class="services py-5 shadow-lg  bg-tertiary-color  bg-gradient id="servicios">
+    <div class="container-lg py-4">   
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+          <h2 class="fw-bold mb-5 text-secondary">Mis Servicios</h2>
+        </div>
+        <div class="row text-center">
+         <article class="col-md-6 col-lg-4 mb-4">
+            <div class="service-item shadow p-4 rounded bg-white"  data-aos="zoom-in">
+              <div class="icon my-3 text-warning fs-2 ">
+              <i class=" fas fa-code"></i></div>
+             
+<h3 class="fs-5 py-2 text-warning"> Desarollo web</h3>
+<p class="text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+ </div>
+          </article>
+          <article class="col-md-6 col-lg-4 mb-4">
+            <div class="service-item shadow p-4 rounded bg-white"  data-aos="zoom-in">
+              <div class="icon my-3 text-warning fs-2 ">
+              <i class="fas fa-lightbulb"></i></div>
+             
+<h3 class="fs-5 py-2 text-warning"> Diseño creativo</h3>
+<p class="text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+ </div>
+          </article>
+           <article class="col-md-6 col-lg-4 mb-4">
+            <div class="service-item shadow p-4 rounded bg-white"  data-aos="zoom-in">
+              <div class="icon my-3 text-warning fs-2 ">
+              <i class="fa-solid fa-arrows-split-up-and-left"></i></div>
+             
+<h3 class="fs-5 py-2 text-warning"> Desarollo web</h3>
+<p class="text-muted"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+ </div>
+          </article>
+
+        </div>
+     </div>    
+    </div>
+
+</section>
+
+<!---Portfolio section-->
+<section class="portolfio bg-white py-5 shadow-lg" id="portfolio">
+  <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+          <h2 class="fw-bold mb-5 text-secondary">Mis últimos Trabajos</h2>
+        </div>
+     </div>
+    </div>
+
+    <div class="row">
+      <article class="col-md-6 col-lg-4"  data-aos="zoom-in">
+        <div class="portolfio'item">
+          <img src="/img/1.jpg" alt="img-portoflio" class="portolfio-img img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2 text-secondary">Lorem ipsum dolor sit amet.</h3>
+          <p class="mb-4"><a href="#" class="text-warning text-decoration-none">Ver mas</a></p>
+        </div>
+
+      </article>
+
+        <article class="col-md-6 col-lg-4"  data-aos="zoom-in">
+        <div class="portolfio'item">
+          <img src="/img/2.jpg" alt="img-portoflio" class="portolfio-img img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2 text-secondary">Lorem ipsum dolor sit amet.</h3>
+          <p class="mb-4"><a href="#" class="text-warning text-decoration-none">Ver mas</a></p>
+        </div>
+
+      </article>
+
+        <article class="col-md-6 col-lg-4"  data-aos="zoom-in">
+        <div class="portolfio'item">
+          <img src="/img/3.jpg" alt="img-portoflio" class="portolfio-img img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2 text-secondary">Lorem ipsum dolor sit amet.</h3>
+          <p class="mb-4"><a href="#" class="text-warning text-decoration-none">Ver mas</a></p>
+        </div>
+
+      </article>
+
+        <article class="col-md-6 col-lg-4"  data-aos="zoom-in">
+        <div class="portolfio'item">
+          <img src="/img/4.jpg" alt="img-portoflio" class="portolfio-img img-thumbnail">
+         <h3 class="text-capitalize fs-5 my-2 text-secondary">Lorem ipsum dolor sit amet.</h3>
+          <p class="mb-4"><a href="#" class="text-warning text-decoration-none">Ver mas</a></p>
+        </div>
+
+      </article>
+
+        <article class="col-md-6 col-lg-4"  data-aos="zoom-in">
+        <div class="portolfio'item">
+          <img src="/img/5.jpg" alt="img-portoflio" class="portolfio-img img-thumbnail">
+          <h3 class="text-capitalize fs-5 my-2 text-secondary">Lorem ipsum dolor sit amet.</h3>
+          <p class="mb-4"><a href="#" class="text-warning text-decoration-none">Ver mas</a></p>
+        </div>
+
+      </article>
+
+        <article class="col-md-6 col-lg-4"  data-aos="zoom-in">
+        <div class="portolfio'item">
+          <img src="/img/6.jpg" alt="img-portoflio" class="portolfio-img img-thumbnail">
+         <h3 class="text-capitalize fs-5 my-2 text-secondary">Lorem ipsum dolor sit amet.</h3>
+          <p class="mb-4"><a href="#" class="text-warning text-decoration-none">Ver mas</a></p>
+        </div>
+
+      </article>
+
+
+
+    </div>
+
+  </div>
+<!---Banner Section-->
+<section class="freelence-available bg-warning bg-gradient py-5">
+    <div class="container-lg py-4">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <p class="fs-5 text-gray-600">¿Necesitás realizar algún proytecto?</p>
+          <h2 class="fs-1 mb-4 text-gray-600"  data-aos="zoom-in">Estoy disponible para ayudarte!</h2>
+          <a href="httpS://api.whatsapp.com/send?phone=543815975796" target="_blank" class="btn btn-outline-dark">Contactame <i class="fa-brands fa-whatsapp fa-lg"></i></a>
+        </div>
+      </div>
+
+
+
+    </div>
+
+</section>
+<!---Reviews Section-->
+<section class="resenas bg-gray-200" py-5 id="resenas">
+  <div class="container-lg py-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="section-title text-center">
+          <h2 class="fw-bold mb-5 text-secondary">Reseñas de Clientes</h2>
+        </div>
+     </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col col-xl-7">
+        <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="
+            Slide 1"></button>
+            <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-current="true"></button>
+            <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-current="true"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <!---item 1-->
+            <div class="carousel-item active">
+              <div class="reviews-item bg-secondary rning gb-gradient shadow-sm rounded p-4">
+                <div class="reviews-author-info d-flex align-items-center">
+                  <img src="/img/reviews/1.jpg" class="img-thumbnail rounded-circle" alt=" review-author-img">
+                  <div class="author ms-3">
+                    <h3 class="fs-6 mb-1 text-warning">Paco de Galicia</h3>
+                    <p class="text-white m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+                <p class="text-white mt-3 text-center mx-5 p-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores voluptate eum nemo non voluptatum corrupti repellat unde neque, molestias placeat odit quidem quisquam architecto sit quasi! Neque libero adipisci deleniti...</p>
+                <div class="rating text-white">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </div>
+              </div>
+            </div>
+          <!---Item 2-->  
+          <div class="carousel-item">
+              <div class="reviews-item bg-secondary gb-gradient shadow-sm rounded p-4">
+                <div class="reviews-author-info d-flex align-items-center">
+                  <img src="/img/reviews/2.jpg" class="img-thumbnail rounded-circle" alt=" review-author-img">
+                  <div class="author ms-3">
+                    <h3 class="fs-6 mb-1 text-warning">Lorena del Aire</h3>
+                    <p class="text-white m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+                <p class="text-white mt-3 text-center mx-5 p-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores voluptate eum nemo non voluptatum corrupti repellat unde neque, molestias placeat odit quidem quisquam architecto sit quasi! Neque libero adipisci deleniti...</p>
+                <div class="rating text-white">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </div>
+              </div>
+            </div>
+            <!---Item 3-->
+            <div class="carousel-item">
+              <div class="reviews-item bg-secondary gb-gradient shadow-sm rounded p-4">
+                <div class="reviews-author-info d-flex align-items-center">
+                  <img src="/img/reviews/3.jpg" class="img-thumbnail rounded-circle" alt=" review-author-img">
+                  <div class="author ms-3">
+                    <h3 class="fs-6 mb-1 text-warning">Miguel Venteveo</h3>
+                    <p class="text-white m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  </div>
+                </div>
+                <p class="text-white mt-3 text-center mx-5 p-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores voluptate eum nemo non voluptatum corrupti repellat unde neque, molestias placeat odit quidem quisquam architecto sit quasi! Neque libero adipisci deleniti...</p>
+                <div class="rating text-white">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previus</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!---Contacto-->
+
+<section class="contacto bg-gray-300 bg-gradient py-5 shadow-lg" id="contacto">
+  <div class="container">
+    <!-- Título centrado -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10 text-center">
+        <h2 class="fw-bold mb-5 text-secondary">Contacta Conmigo</h3>
+      </div>
+    </div>
+
+    <!-- Contenido en 2 columnas -->
+    <div class="row justify-content-center">
+      <!-- Columna izquierda (Email y info) -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <div class="p-4 shadow-lg rounded-3 h-100 bg-gray-100 bg-gradient">
+          <div class="d-flex align-items-start mb-4">
+            <div class="me-3 text-primary fs-3">
+              <i class="fas fa-envelope text-warning"></i>
+            </div>
+            <div>
+              <h3 class="h5">Correo Electrónico</h3>
+              <a href="mailto:aletorresprado@live.com" class="text-decoration-none text-secondary">aletorresprado@live.com</a>
+            </div>
+          </div>
+
+          <!-- Puedes agregar más info aquí -->
+          <div class="d-flex align-items-start mb-4">
+            <div class="me-3 text-primary fs-3">
+              <i class="fas fa-phone-alt text-warning"></i>
+            </div>
+            <div>
+              <h3 class="h5">Teléfono</h3>
+              <a href="tel:+123456789" class="text-decoration-none text-secondary">+54 381 5975796</a>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-start">
+            <div class="me-3 text-primary fs-3 ">
+              <i class="fas fa-map-marker-alt text-warning"></i>
+            </div>
+            <div>
+              <h3 class="h5">Ubicación</h3>
+              <p class="mb-0 text-secondary" >Tucuman, Argentina</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna derecha (Formulario) -->
+      <div class="col-lg-7">
+        <div class="p-4 shadow-lg rounded-3 bg-light">
+          <h4 class="h4 mb-4">Envíame un mensaje</h4>
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Nombre" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Asunto">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" placeholder="Tu mensaje" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning px-4 py-2">Enviar Mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!---Footer-->
+<a href="https://api.whatsapp.com/send?phone=5493815975796" target="_blank"><img src="/img/icono.wtp2.png" alt="whatsapp" class="icon_contacto"></a>
+
+<footer class="bg-secondary text-center text-white">
+    <div class="container py-5">
+      <p class="mb-0"> @ Comisión Web 15 - 2025 / ATP.</p>
+    </div>
+  </footer>
+
+  <script src="theme-toggle.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!---AOS-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+  </body>
+</html>
