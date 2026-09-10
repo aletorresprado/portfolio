@@ -103,15 +103,13 @@ export default function RestaurantReservationPlatform() {
         </h2>
 
         <p className="mt-10 max-w-2xl text-lg leading-8 text-zinc-600">
-          The platform needs to coordinate customer reservations across five
-          restaurant branches while providing the internal team with a clear
-          operational view of availability, bookings and reservation status.
+          The challenge is to coordinate reservations across five restaurant locations while giving staff a clear, 
+          real-time view of availability, bookings, and reservation status.
         </p>
 
         <p className="mt-6 max-w-2xl leading-7 text-zinc-500">
-          Customers need a simple booking experience, while restaurant staff
-          need centralized control, branch filtering and reliable information
-          for daily operations.
+          Customers need a frictionless booking experience, while restaurant staff need centralized control, 
+          branch-level filtering, and reliable information to manage daily operations.
         </p>
       </div>
     </div>
@@ -131,9 +129,9 @@ export default function RestaurantReservationPlatform() {
         </h2>
 
         <p className="mt-10 max-w-2xl text-lg leading-8 text-zinc-600">
-          The system is being designed as a shared platform with separate
-          experiences for customers and restaurant staff, supported by a
-          centralized API and a common business domain.
+          The solution brings both sides of the reservation process into a single platform, 
+          with dedicated experiences for customers and restaurant staff, 
+          backed by a centralized API and shared business logic.
         </p>
 
         <div className="mt-14 grid gap-px bg-zinc-200 sm:grid-cols-2">
