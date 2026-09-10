@@ -1,69 +1,73 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main className="min-h-screen bg-white text-black">
+      <section
+        id="home"
+        className="flex min-h-screen flex-col justify-between px-6 py-8 sm:px-10 md:px-16 lg:px-24"
+      >
+        <header className="flex items-center justify-between">
+  <a
+    href="#home"
+    className="text-sm font-medium tracking-[0.2em] uppercase"
+  >
+    Alejandro Torres
+  </a>
+
+  <nav className="hidden items-center gap-8 text-sm text-zinc-500 md:flex">
+    <a className="transition-colors hover:text-black" href="#work">
+      Work
+    </a>
+
+    <a className="transition-colors hover:text-black" href="#about">
+      About
+    </a>
+
+    <a className="transition-colors hover:text-black" href="#capabilities">
+      Capabilities
+    </a>
+
+    <a className="transition-colors hover:text-black" href="#contact">
+      Contact
+    </a>
+  </nav>
+
+  <div className="flex items-center gap-2 text-sm">
+    <span className="relative flex size-2">
+      <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
+      <span className="relative inline-flex size-2 rounded-full bg-emerald-500"></span>
+    </span>
+
+    <span className="hidden sm:inline">
+      Available
+    </span>
+  </div>
+</header>
+
+        <div className="max-w-6xl">
+          <p className="mb-6 text-sm uppercase tracking-[0.3em] text-zinc-500">
+            Remote · Argentina
+          </p>
+
+          <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+            I design.
+            <br />
+            I develop.
+            <br />
+            I solve.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-600 sm:text-xl">
+            Diseño experiencias visuales y construyo soluciones digitales
+            para agencias, estudios y equipos de producto.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+        <footer className="flex flex-col gap-4 border-t border-zinc-200 pt-6 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
+          <p>Graphic Design · Frontend · Full Stack · UI · AI</p>
+
+          <p>Available for remote work</p>
+        </footer>
+      </section>
+    </main>
   );
 }
