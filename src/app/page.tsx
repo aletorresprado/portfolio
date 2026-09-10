@@ -135,7 +135,10 @@ export default function Home() {
 </Link>
 
 
-      <article className="group bg-white p-8 sm:p-10">
+      <Link
+  href="/work/healthcare-management-app"
+  className="group block bg-white p-8 sm:p-10"
+>
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
             Web Application
@@ -147,22 +150,28 @@ export default function Home() {
         </div>
 
         <div>
-          <h3 className="text-3xl font-medium tracking-tight">
-            Healthcare
-            <br />
-            Management App
-          </h3>
+          <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+  Healthcare
+  <br />
+  Management App
+</h3>
 
           <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
             Role-based healthcare application for patients, professionals and
             administrators.
           </p>
 
-          <p className="mt-8 text-sm text-zinc-400">
-            React · Tailwind · React Hook Form · Zod
-          </p>
+          <div className="mt-8 flex items-end justify-between gap-6">
+  <p className="text-sm text-zinc-400">
+    React · Tailwind · React Hook Form · Zod
+  </p>
+
+  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+    ↗
+  </span>
+</div>
         </div>
-      </article>
+      </Link>
 
 
       <article className="group bg-white p-8 sm:p-10">
