@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-black">
@@ -94,34 +96,43 @@ export default function Home() {
 
     <div className="grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
 
-      <article className="group bg-white p-8 sm:p-10">
-        <div className="mb-20 flex items-start justify-between">
-          <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-            Full Stack
-          </span>
+      <Link
+  href="/work/restaurant-reservation-platform"
+  className="group block bg-white p-8 sm:p-10"
+>
+  <div className="mb-20 flex items-start justify-between">
+    <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+      Full Stack
+    </span>
 
-          <span className="text-xs text-zinc-400">
-            2026
-          </span>
-        </div>
+    <span className="text-xs text-zinc-400">
+      2026
+    </span>
+  </div>
 
-        <div>
-          <h3 className="text-3xl font-medium tracking-tight">
-            Restaurant
-            <br />
-            Reservation Platform
-          </h3>
+  <div>
+    <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+      Restaurant
+      <br />
+      Reservation Platform
+    </h3>
 
-          <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
-            Reservation and management platform designed for a restaurant
-            operation with multiple branches.
-          </p>
+    <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
+      Reservation and management platform designed for a restaurant
+      operation with multiple branches.
+    </p>
 
-          <p className="mt-8 text-sm text-zinc-400">
-            React · TypeScript · NestJS · REST API
-          </p>
-        </div>
-      </article>
+    <div className="mt-8 flex items-end justify-between gap-6">
+      <p className="text-sm text-zinc-400">
+        React · TypeScript · NestJS · REST API
+      </p>
+
+      <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+        ↗
+      </span>
+    </div>
+  </div>
+</Link>
 
 
       <article className="group bg-white p-8 sm:p-10">
