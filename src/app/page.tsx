@@ -174,7 +174,10 @@ export default function Home() {
       </Link>
 
 
-      <article className="group bg-white p-8 sm:p-10">
+      <Link
+  href="/work/bookstore-api"
+  className="group block bg-white p-8 sm:p-10"
+>
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
             Backend
@@ -186,7 +189,7 @@ export default function Home() {
         </div>
 
         <div>
-          <h3 className="text-3xl font-medium tracking-tight">
+          <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
             Bookstore
             <br />
             API
@@ -197,14 +200,23 @@ export default function Home() {
             transactional email workflows.
           </p>
 
-          <p className="mt-8 text-sm text-zinc-400">
-            Node.js · Express · MongoDB · JWT
-          </p>
+         <div className="mt-8 flex items-end justify-between gap-6">
+  <p className="text-sm text-zinc-400">
+    Node.js · Express · MongoDB · JWT
+  </p>
+
+  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+    ↗
+  </span>
+</div>
         </div>
-      </article>
+      </Link>
 
 
-      <article className="group bg-black p-8 text-white sm:p-10">
+      <Link
+  href="/work/graphic-design-archive"
+  className="group block bg-zinc-950 p-8 text-white sm:p-10"
+>
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-400">
             Graphic Design
@@ -216,22 +228,23 @@ export default function Home() {
         </div>
 
         <div>
-          <h3 className="text-3xl font-medium tracking-tight">
-            Visual
-            <br />
-            Design Archive
-          </h3>
+          <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+  Graphic Design
+  <br />
+  Archive
+</h3>
 
-          <p className="mt-5 max-w-md leading-relaxed text-zinc-400">
-            Selected work in visual identity, editorial design, communication
-            and digital graphics.
-          </p>
+         <div className="mt-8 flex items-end justify-between gap-6">
+  <p className="text-sm text-zinc-500">
+    Branding · Editorial · Digital · Visual Communication
+  </p>
 
-          <p className="mt-8 text-sm text-zinc-500">
-            Branding · Editorial · Digital · Visual Communication
-          </p>
+  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
+    ↗
+  </span>
+</div>
         </div>
-      </article>
+      </Link>
 
     </div>
   </div>
