@@ -212,13 +212,13 @@ export default function Home() {
         </div>
       </Link>
 
-
+{/* Graphic Design */}
       <Link
   href="/work/graphic-design-archive"
   className="group block bg-zinc-950 p-8 text-white sm:p-10"
 >
         <div className="mb-20 flex items-start justify-between">
-          <span className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+          <span className="text-xs uppercase tracking-[0.2em]  text-zinc-400">
             Graphic Design
           </span>
 
@@ -228,7 +228,7 @@ export default function Home() {
         </div>
 
         <div>
-          <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+          <h3 className=" text-white text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
   Graphic Design
   <br />
   Archive

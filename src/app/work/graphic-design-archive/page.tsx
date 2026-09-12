@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+
 
 export const metadata: Metadata = {
   title: "Graphic Design Archive",
@@ -67,27 +69,32 @@ export default function GraphicDesignArchive() {
             01 — Selected Work
           </p>
 
-          <div className="mt-16 grid min-h-[60vh] place-items-center border border-zinc-200">
-            <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">
-              Visual archive begins here
-            </p>
-          </div>
+          <div className="relative mt-16 min-h-[60vh] overflow-hidden border border-zinc-200">
+  <Image
+    src="/design/portada.webp"
+    alt="Graphic Design Archive cover"
+    fill
+    priority
+    sizes="(max-width: 768px) 100vw, 1280px"
+    className="object-cover"
+  />
+</div>
         </div>
       </section>
       <div className="mt-16 space-y-24 lg:space-y-32">
 
   {/* HERO — Microscopía Forense */}
-  <div className="grid min-h-[70vh] place-items-center border border-zinc-200 bg-zinc-100">
-    <div className="text-center">
-      <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-        Hero Image
-      </p>
-
-      <p className="mt-4 text-sm text-zinc-500">
-        Microscopy / Forensic Science
-      </p>
-    </div>
-  </div>
+<div className="w-full overflow-hidden bg-zinc-100">
+  <Image
+    src="/design/forensic-microscopy.webp"
+    alt="Microscopy and Forensic Science visual communication"
+    width={2400}
+    height={1680}
+    priority
+    sizes="(max-width: 768px) 100vw, 1280px"
+    className="h-auto w-full"
+  />
+</div>
 
   {/* CAFÉ CIENTÍFICO — Sistema */}
   <div>
@@ -109,50 +116,81 @@ export default function GraphicDesignArchive() {
     </div>
 
     <div className="grid gap-4 md:grid-cols-3">
-      {[1, 2, 3].map((item) => (
-        <div
-          key={item}
-          className="aspect-[4/5] border border-zinc-200 bg-zinc-100"
-        />
-      ))}
+  {[
+    "/design/cafe-cientifico-01.webp",
+    "/design/cafe-cientifico-02.webp",
+    "/design/cafe-cientifico-03.webp",
+  ].map((src, index) => (
+    <div key={src} className="overflow-hidden bg-zinc-100">
+      <Image
+        src={src}
+        alt={`Café Científico visual identity ${index + 1}`}
+        width={1200}
+        height={1500}
+        sizes="(max-width: 768px) 100vw, 33vw"
+        className="h-auto w-full"
+      />
     </div>
+  ))}
+</div>
   </div>
 
   {/* PIANO — Dirección de arte */}
-  <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-    <div className="aspect-[4/5] border border-zinc-200 bg-zinc-100" />
-
-    <div className="flex min-h-[420px] items-end bg-zinc-950 p-8 text-white sm:p-10">
-      <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-zinc-600">
-          Art Direction
-        </p>
-
-        <p className="mt-6 max-w-md text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-          Image,
-          <br />
-          typography
-          <br />
-          and tension.
-        </p>
-      </div>
-    </div>
+<div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+  <div className="overflow-hidden bg-zinc-100">
+    <Image
+      src="/design/recital-piano.webp"
+      alt="Piano and chamber music recital poster"
+      width={1600}
+      height={2000}
+      sizes="(max-width: 1024px) 100vw, 55vw"
+      className="h-auto w-full"
+    />
   </div>
 
-  {/* FLAUTAS — Pausa visual */}
-  <div className="py-16 lg:py-24">
-    <div className="mx-auto max-w-3xl">
-      <div className="aspect-[3/4] border border-zinc-200 bg-zinc-100" />
+  <div className="flex min-h-[420px] items-end bg-zinc-950 p-8 text-white sm:p-10">
+    <div>
+      <p className="text-xs uppercase tracking-[0.2em] text-zinc-600">
+        Art Direction
+      </p>
 
-      <p className="mt-6 text-sm text-zinc-500">
-        Cultural communication · Typography · Composition
+      <p className="mt-6 max-w-md text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+        Image,
+        <br />
+        typography
+        <br />
+        and tension.
       </p>
     </div>
   </div>
+</div>
+
+  {/* FLAUTAS — Pausa visual */}
+<div className="py-16 lg:py-24">
+  <div className="mx-auto max-w-3xl">
+    <div className="relative aspect-[3/4] overflow-hidden border border-zinc-200 bg-zinc-100">
+      <Image
+        src="/design/recital-flautas.webp"
+        alt="Flute recital visual communication"
+        fill
+        sizes="(max-width: 768px) 100vw, 768px"
+        className="object-contain p-4 sm:p-6"
+      />
+    </div>
+
+    <p className="mt-6 text-sm text-zinc-500">
+      Cultural communication · Typography · Composition
+    </p>
+  </div>
+</div>
+  
 
   {/* EDITORIAL — Folleto territorial */}
-  <div>
-    <div className="mb-8">
+{/* EDITORIAL — Folleto territorial */}
+<div className="py-12 lg:py-20">
+  <div className="mx-auto max-w-5xl">
+
+    <div className="mb-10">
       <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
         Editorial Design
       </p>
@@ -162,24 +200,92 @@ export default function GraphicDesignArchive() {
       </h2>
     </div>
 
-    <div className="aspect-[16/7] border border-zinc-200 bg-zinc-100" />
-
-    <div className="mt-4 grid gap-4 md:grid-cols-3">
-      <div className="aspect-square border border-zinc-200 bg-zinc-100" />
-      <div className="aspect-square border border-zinc-200 bg-zinc-100" />
-      <div className="aspect-square border border-zinc-200 bg-zinc-100" />
+    {/* Pieza editorial completa */}
+    <div className="mx-auto max-w-4xl overflow-hidden bg-zinc-100">
+      <Image
+        src="/design/editorial-territorio-main-00.webp"
+        alt="Territorial editorial design"
+        width={2400}
+        height={1050}
+        sizes="(max-width: 768px) 100vw, 900px"
+        className="h-auto w-full"
+      />
     </div>
+
+    {/* Detalles editoriales */}
+    <div className="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-2 lg:gap-10">
+      {[
+        "/design/editorial-territorio-main-01.webp",
+        "/design/editorial-territorio-main-02.webp",
+        "/design/editorial-territorio-main-03.webp",
+        "/design/editorial-territorio-main-04.webp",
+      ].map((src, index) => (
+        <div
+          key={src}
+          className="relative aspect-[4/3] overflow-hidden bg-zinc-100"
+        >
+          <Image
+            src={src}
+            alt={`Territorial editorial design detail ${index + 1}`}
+            fill
+            sizes="(max-width: 768px) 100vw, 420px"
+            className="object-contain"
+          />
+        </div>
+      ))}
+    </div>
+
   </div>
+</div>
 
   {/* WORKSHOP — Campaña */}
-  <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-    <div className="aspect-[4/3] border border-zinc-200 bg-zinc-100" />
+<div>
+  <div className="mb-8">
+    <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+      Campaign System
+    </p>
 
+    <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl">
+      One identity. Multiple applications.
+    </h2>
+  </div>
+
+  <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+
+    {/* Pieza principal */}
+    <div className="overflow-hidden bg-zinc-100">
+      <Image
+        src="/design/workshop-main.webp"
+        alt="Electron microscopy workshop main visual"
+        width={1800}
+        height={1350}
+        sizes="(max-width: 1024px) 100vw, 60vw"
+        className="h-auto w-full"
+      />
+    </div>
+
+    {/* Aplicaciones */}
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-      <div className="aspect-[4/3] border border-zinc-200 bg-zinc-100" />
-      <div className="aspect-[4/3] border border-zinc-200 bg-zinc-100" />
+      {[
+        "/design/workshop-01.webp",
+        "/design/workshop-02.webp",
+      ].map((src, index) => (
+        <div
+          key={src}
+          className="relative aspect-[4/3] overflow-hidden bg-zinc-100"
+        >
+          <Image
+            src={src}
+            alt={`Electron microscopy workshop application ${index + 1}`}
+            fill
+            sizes="(max-width: 1024px) 50vw, 40vw"
+            className="object-contain"
+          />
+        </div>
+      ))}
     </div>
   </div>
+</div>
 
 </div>
 <section className="bg-zinc-950 px-6 py-24 text-white sm:px-10 md:px-16 lg:px-24 lg:py-32">
@@ -194,23 +300,45 @@ export default function GraphicDesignArchive() {
       hold an identity.
     </h2>
 
-    <div className="mt-20 space-y-6">
-      {[
-        "Identity 01",
-        "Identity 02",
-        "Identity 03",
-        "Identity 04",
-      ].map((identity) => (
-        <div
-          key={identity}
-          className="grid min-h-[45vh] place-items-center border border-zinc-800"
-        >
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-600">
-            {identity}
-          </p>
-        </div>
-      ))}
+   <div className="mt-20 grid gap-8 md:grid-cols-2 lg:gap-10">
+  {[
+    "/design/identity-01.svg",
+    "/design/identity-02.svg",
+    "/design/identity-03.svg",
+    "/design/identity-04.svg",
+    "/design/identity-05.svg",
+    "/design/identity-06.svg",
+    "/design/identity-07.svg",
+  ].map((src, index) => (
+    <div
+      key={src}
+      className={`group flex min-h-[38vh] items-center justify-center bg-white p-12 sm:p-16 lg:p-20 ${
+        index === 6 ? "md:col-span-2" : ""
+      }`}
+    >
+      <div
+        className={`relative w-full transition-transform duration-500 group-hover:scale-[1.03] ${
+          index === 6
+            ? "h-44 max-w-lg sm:h-52"
+            : "h-36 max-w-sm sm:h-44"
+        }`}
+      >
+        <Image
+          src={src}
+          alt={`Selected visual identity ${index + 1}`}
+          fill
+          sizes={
+            index === 6
+              ? "(max-width: 768px) 75vw, 500px"
+              : "(max-width: 768px) 70vw, 360px"
+          }
+          className="object-contain"
+          unoptimized
+        />
+      </div>
     </div>
+  ))}
+</div>
   </div>
 </section>
 <section className="bg-white px-6 py-24 text-black sm:px-10 md:px-16 lg:px-24 lg:py-32">
