@@ -50,7 +50,7 @@ export default function Home() {
             Remote · Argentina
           </p>
 
-          <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+          <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl  text-yellow-500">
             I design.
             <br />
             I develop.
@@ -81,7 +81,7 @@ export default function Home() {
           01 — Selected Work
         </p>
 
-        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl">
+        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl  text-yellow-500">
           Work that solves
           <br />
           real problems.
@@ -228,7 +228,7 @@ export default function Home() {
         </div>
 
         <div>
-          <h3 className=" text-white text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+          <h3 className=" text-yellow-300 text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
   Graphic Design
   <br />
   Archive
@@ -259,7 +259,7 @@ export default function Home() {
         02 — Capabilities
       </p>
 
-      <h2 className="max-w-4xl text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+      <h2 className="max-w-4xl text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl  text-yellow-300">
         Design thinking.
         <br />
         Development skills.
@@ -372,7 +372,7 @@ export default function Home() {
     </div>
 
     <div>
-      <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl">
+      <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl  text-yellow-300 text-yellow-500">
         I combine visual thinking, software development and technical problem
         solving.
       </h2>
@@ -434,7 +434,7 @@ export default function Home() {
           04 — Contact
         </p>
 
-        <h2 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
+        <h2 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl  text-yellow-300">
           Let&apos;s build
           <br />
           something useful.
@@ -520,7 +520,7 @@ export default function Home() {
       </div>
     </div>
 
-    <footer className="mt-24 flex flex-col gap-4 border-t border-zinc-800 pt-8 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
+    <footer className="mt-24 flex flex-col gap-4 border-t border-zinc-800 pt-8 text-sm text-yellow-500 sm:flex-row sm:items-center sm:justify-between">
       <p>© 2026 Alejandro Torres</p>
 
       <p>Designer × Developer</p>

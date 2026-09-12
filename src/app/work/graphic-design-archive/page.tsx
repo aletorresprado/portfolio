@@ -36,7 +36,7 @@ export default function GraphicDesignArchive() {
             Selected Visual Work
           </p>
 
-          <h1 className="text-[17vw] font-medium uppercase leading-[0.72] tracking-[-0.075em] sm:text-[15vw] lg:text-[12rem]">
+          <h1 className="text-[17vw] font-medium uppercase leading-[0.72] tracking-[-0.075em] sm:text-[15vw] lg:text-[12rem] text-yellow-500">
             Graphic
             <br />
             Design
@@ -63,20 +63,22 @@ export default function GraphicDesignArchive() {
         </div>
       </section>
 
+{/* Selected Work */}
       <section className="bg-white px-6 py-24 text-black sm:px-10 md:px-16 lg:px-24 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">
             01 — Selected Work
           </p>
 
-          <div className="relative mt-16 min-h-[60vh] overflow-hidden border border-zinc-200">
+    <div className="group mt-16 overflow-hidden border border-zinc-200 bg-zinc-100">
   <Image
     src="/design/portada.webp"
     alt="Graphic Design Archive cover"
-    fill
+    width={2400}
+    height={1350}
     priority
     sizes="(max-width: 768px) 100vw, 1280px"
-    className="object-cover"
+    className="h-auto w-full transition-transform duration-1000 ease-out group-hover:scale-[1.01]"
   />
 </div>
         </div>
@@ -84,7 +86,7 @@ export default function GraphicDesignArchive() {
       <div className="mt-16 space-y-24 lg:space-y-32">
 
   {/* HERO — Microscopía Forense */}
-<div className="w-full overflow-hidden bg-zinc-100">
+<div className="group w-full overflow-hidden bg-zinc-100">
   <Image
     src="/design/forensic-microscopy.webp"
     alt="Microscopy and Forensic Science visual communication"
@@ -92,7 +94,7 @@ export default function GraphicDesignArchive() {
     height={1680}
     priority
     sizes="(max-width: 768px) 100vw, 1280px"
-    className="h-auto w-full"
+    className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.015]"
   />
 </div>
 
@@ -104,7 +106,7 @@ export default function GraphicDesignArchive() {
           Visual System
         </p>
 
-        <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl">
+        <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-300">
           Café Científico
         </h2>
       </div>
@@ -121,14 +123,14 @@ export default function GraphicDesignArchive() {
     "/design/cafe-cientifico-02.webp",
     "/design/cafe-cientifico-03.webp",
   ].map((src, index) => (
-    <div key={src} className="overflow-hidden bg-zinc-100">
+    <div key={src} className="group overflow-hidden bg-zinc-100">
       <Image
         src={src}
         alt={`Café Científico visual identity ${index + 1}`}
         width={1200}
         height={1500}
         sizes="(max-width: 768px) 100vw, 33vw"
-        className="h-auto w-full"
+        className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
       />
     </div>
   ))}
@@ -137,14 +139,14 @@ export default function GraphicDesignArchive() {
 
   {/* PIANO — Dirección de arte */}
 <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-  <div className="overflow-hidden bg-zinc-100">
+  <div className="group overflow-hidden bg-zinc-100">
     <Image
       src="/design/recital-piano.webp"
       alt="Piano and chamber music recital poster"
       width={1600}
       height={2000}
       sizes="(max-width: 1024px) 100vw, 55vw"
-      className="h-auto w-full"
+      className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.015]"
     />
   </div>
 
@@ -154,7 +156,7 @@ export default function GraphicDesignArchive() {
         Art Direction
       </p>
 
-      <p className="mt-6 max-w-md text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
+      <p className="mt-6 max-w-md text-4xl font-medium leading-tight tracking-tight sm:text-5xl text-yellow-300">
         Image,
         <br />
         typography
@@ -168,13 +170,13 @@ export default function GraphicDesignArchive() {
   {/* FLAUTAS — Pausa visual */}
 <div className="py-16 lg:py-24">
   <div className="mx-auto max-w-3xl">
-    <div className="relative aspect-[3/4] overflow-hidden border border-zinc-200 bg-zinc-100">
+    <div className="group relative aspect-[3/4] overflow-hidden border border-zinc-200 bg-zinc-100">
       <Image
         src="/design/recital-flautas.webp"
         alt="Flute recital visual communication"
         fill
         sizes="(max-width: 768px) 100vw, 768px"
-        className="object-contain p-4 sm:p-6"
+        className="object-contain p-4 transition-transform duration-700 ease-out group-hover:scale-[1.02] sm:p-6"
       />
     </div>
 
@@ -195,20 +197,20 @@ export default function GraphicDesignArchive() {
         Editorial Design
       </p>
 
-      <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl">
+      <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-300">
         Information as visual structure
       </h2>
     </div>
 
     {/* Pieza editorial completa */}
-    <div className="mx-auto max-w-4xl overflow-hidden bg-zinc-100">
+    <div className="group mx-auto max-w-4xl overflow-hidden bg-zinc-100">
       <Image
         src="/design/editorial-territorio-main-00.webp"
         alt="Territorial editorial design"
         width={2400}
         height={1050}
         sizes="(max-width: 768px) 100vw, 900px"
-        className="h-auto w-full"
+        className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.015]"
       />
     </div>
 
@@ -222,14 +224,14 @@ export default function GraphicDesignArchive() {
       ].map((src, index) => (
         <div
           key={src}
-          className="relative aspect-[4/3] overflow-hidden bg-zinc-100"
+          className="group relative aspect-[4/3] overflow-hidden"
         >
           <Image
             src={src}
             alt={`Territorial editorial design detail ${index + 1}`}
             fill
             sizes="(max-width: 768px) 100vw, 420px"
-            className="object-contain"
+            className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
           />
         </div>
       ))}
@@ -245,7 +247,7 @@ export default function GraphicDesignArchive() {
       Campaign System
     </p>
 
-    <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl">
+    <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-300">
       One identity. Multiple applications.
     </h2>
   </div>
@@ -253,14 +255,14 @@ export default function GraphicDesignArchive() {
   <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
 
     {/* Pieza principal */}
-    <div className="overflow-hidden bg-zinc-100">
+    <div className="group overflow-hidden bg-zinc-100">
       <Image
         src="/design/workshop-main.webp"
         alt="Electron microscopy workshop main visual"
         width={1800}
         height={1350}
         sizes="(max-width: 1024px) 100vw, 60vw"
-        className="h-auto w-full"
+        className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.015]"
       />
     </div>
 
@@ -272,14 +274,14 @@ export default function GraphicDesignArchive() {
       ].map((src, index) => (
         <div
           key={src}
-          className="relative aspect-[4/3] overflow-hidden bg-zinc-100"
+          className="group relative aspect-[4/3] overflow-hidden"
         >
           <Image
             src={src}
             alt={`Electron microscopy workshop application ${index + 1}`}
             fill
             sizes="(max-width: 1024px) 50vw, 40vw"
-            className="object-contain"
+            className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
           />
         </div>
       ))}
@@ -294,7 +296,7 @@ export default function GraphicDesignArchive() {
       02 — Selected Identities
     </p>
 
-    <h2 className="mt-8 max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl">
+    <h2 className="mt-8 max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-300">
       Marks built to
       <br />
       hold an identity.
@@ -343,7 +345,7 @@ export default function GraphicDesignArchive() {
 </section>
 <section className="bg-white px-6 py-24 text-black sm:px-10 md:px-16 lg:px-24 lg:py-32">
   <div className="mx-auto max-w-7xl">
-    <p className="max-w-5xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl">
+    <p className="max-w-5xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
       Design taught me how to see.
       <br />
       Development taught me how to build.
