@@ -106,7 +106,7 @@ export default function GraphicDesignArchive() {
           Visual System
         </p>
 
-        <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-300">
+        <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-500">
           Café Científico
         </h2>
       </div>
@@ -156,7 +156,7 @@ export default function GraphicDesignArchive() {
         Art Direction
       </p>
 
-      <p className="mt-6 max-w-md text-4xl font-medium leading-tight tracking-tight sm:text-5xl text-yellow-300">
+      <p className="mt-6 max-w-md text-4xl font-medium leading-tight tracking-tight sm:text-5xl text-yellow-500">
         Image,
         <br />
         typography
@@ -197,7 +197,7 @@ export default function GraphicDesignArchive() {
         Editorial Design
       </p>
 
-      <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-300">
+      <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-500">
         Information as visual structure
       </h2>
     </div>
@@ -247,7 +247,7 @@ export default function GraphicDesignArchive() {
       Campaign System
     </p>
 
-    <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-300">
+    <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-500">
       One identity. Multiple applications.
     </h2>
   </div>
@@ -296,7 +296,7 @@ export default function GraphicDesignArchive() {
       02 — Selected Identities
     </p>
 
-    <h2 className="mt-8 max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-300">
+    <h2 className="mt-8 max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
       Marks built to
       <br />
       hold an identity.

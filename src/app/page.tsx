@@ -1,4 +1,5 @@
 import Link from "next/link";
+import MobileMenu from "@/components/MobileMenu";
 
 export default function Home() {
   return (
@@ -33,16 +34,18 @@ export default function Home() {
     </a>
   </nav>
 
-  <div className="flex items-center gap-2 text-sm">
+  <div className="flex items-center">
+  <div className="hidden items-center gap-2 text-sm md:flex">
     <span className="relative flex size-2">
-      <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
-      <span className="relative inline-flex size-2 rounded-full bg-emerald-500"></span>
+      <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+      <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
     </span>
 
-    <span className="hidden sm:inline">
-      Available
-    </span>
+    <span>Available</span>
   </div>
+
+  <MobileMenu />
+</div>
 </header>
 
         <div className="max-w-6xl">
@@ -228,7 +231,7 @@ export default function Home() {
         </div>
 
         <div>
-          <h3 className=" text-yellow-300 text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+          <h3 className=" text-yellow-500 text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
   Graphic Design
   <br />
   Archive
@@ -259,7 +262,7 @@ export default function Home() {
         02 — Capabilities
       </p>
 
-      <h2 className="max-w-4xl text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl  text-yellow-300">
+      <h2 className="max-w-4xl text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl  text-yellow-500">
         Design thinking.
         <br />
         Development skills.
@@ -372,7 +375,7 @@ export default function Home() {
     </div>
 
     <div>
-      <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl  text-yellow-300 text-yellow-500">
+      <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
         I combine visual thinking, software development and technical problem
         solving.
       </h2>
@@ -434,7 +437,7 @@ export default function Home() {
           04 — Contact
         </p>
 
-        <h2 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl  text-yellow-300">
+        <h2 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl  text-yellow-500">
           Let&apos;s build
           <br />
           something useful.
