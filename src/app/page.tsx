@@ -1,5 +1,6 @@
 import Link from "next/link";
 import MobileMenu from "@/components/MobileMenu";
+import Reveal from "@/components/Reveal";
 
 export default function Home() {
   return (
@@ -78,6 +79,7 @@ export default function Home() {
   className="border-t border-zinc-200 px-6 py-24 sm:px-10 md:px-16 lg:px-24 lg:py-32"
 >
   <div className="mx-auto max-w-7xl">
+    <Reveal>
     <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
       <div>
         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
@@ -97,12 +99,14 @@ export default function Home() {
       </p>
     </div>
 
+    {/* Restaurant */}
+    </Reveal> 
     <div className="grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2">
-
-      <Link
-  href="/work/restaurant-reservation-platform"
-  className="group block bg-white p-8 sm:p-10"
->
+   <Reveal delay={0}>
+  <Link
+    href="/work/restaurant-reservation-platform"
+    className="group block h-full bg-white p-8 sm:p-10"
+  >
   <div className="mb-20 flex items-start justify-between">
     <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
       Full Stack
@@ -135,13 +139,15 @@ export default function Home() {
       </span>
     </div>
   </div>
-</Link>
+      </Link>
+    </Reveal>
 
-
-      <Link
-  href="/work/healthcare-management-app"
-  className="group block bg-white p-8 sm:p-10"
->
+{/* Healthcare */}
+   <Reveal delay={0.08}>
+  <Link
+    href="/work/healthcare-management-app"
+    className="group block h-full bg-white p-8 sm:p-10"
+  >
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
             Web Application
@@ -175,12 +181,14 @@ export default function Home() {
 </div>
         </div>
       </Link>
+    </Reveal>
 
-
-      <Link
-  href="/work/bookstore-api"
-  className="group block bg-white p-8 sm:p-10"
->
+{/* Bookstore */}
+    <Reveal delay={0.16}>
+  <Link
+    href="/work/bookstore-api"
+    className="group block h-full bg-white p-8 sm:p-10"
+  >
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
             Backend
@@ -214,12 +222,14 @@ export default function Home() {
 </div>
         </div>
       </Link>
+    </Reveal>
 
 {/* Graphic Design */}
-      <Link
-  href="/work/graphic-design-archive"
-  className="group block bg-zinc-950 p-8 text-white sm:p-10"
->
+<Reveal delay={0.24}>
+  <Link
+    href="/work/graphic-design-archive"
+    className="group block h-full bg-zinc-950 p-8 text-white sm:p-10"
+  >
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em]  text-zinc-400">
             Graphic Design
@@ -248,7 +258,7 @@ export default function Home() {
 </div>
         </div>
       </Link>
-
+  </Reveal>
     </div>
   </div>
 </section>
@@ -257,6 +267,7 @@ export default function Home() {
   className="bg-zinc-950 px-6 py-24 text-white sm:px-10 md:px-16 lg:px-24 lg:py-32"
 >
   <div className="mx-auto max-w-7xl">
+    <Reveal>
     <div className="mb-20">
       <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
         02 — Capabilities
@@ -270,7 +281,7 @@ export default function Home() {
         Technical mindset.
       </h2>
     </div>
-
+    </Reveal>
     <div className="border-t border-zinc-800">
 
       <div className="grid gap-8 border-b border-zinc-800 py-10 md:grid-cols-[1fr_2fr]">
@@ -355,24 +366,28 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+{/* About */}
 <section
   id="about"
   className="px-6 py-24 sm:px-10 md:px-16 lg:px-24 lg:py-32"
 >
   <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
-    <div>
-      <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-        03 — About
-      </p>
+    <Reveal y={18}>
+  <div>
+    <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
+      03 — About
+    </p>
 
-      <p className="max-w-xs text-sm leading-relaxed text-zinc-500">
-        Designer by training.
-        <br />
-        Developer by evolution.
-        <br />
-        Technical by nature.
-      </p>
-    </div>
+    <p className="max-w-xs text-sm leading-relaxed text-zinc-500">
+      Designer by training.
+      <br />
+      Developer by evolution.
+      <br />
+      Technical by nature.
+    </p>
+  </div>
+</Reveal>
 
     <div>
       <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
@@ -425,29 +440,34 @@ export default function Home() {
       </div>
     </div>
   </div>
+
 </section>
+
+{/* contact */}
 <section
   id="contact"
   className="bg-zinc-950 px-6 py-24 text-white sm:px-10 md:px-16 lg:px-24 lg:py-32"
 >
   <div className="mx-auto max-w-7xl">
     <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:gap-24">
-      <div>
-        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-          04 — Contact
-        </p>
+      <Reveal y={18}>
+  <div>
+    <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
+      04 — Contact
+    </p>
 
-        <h2 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl  text-yellow-500">
-          Let&apos;s build
-          <br />
-          something useful.
-        </h2>
+    <h2 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight text-yellow-500 sm:text-6xl md:text-7xl lg:text-8xl">
+      Let&apos;s build
+      <br />
+      something useful.
+    </h2>
 
-        <p className="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
-          Available for remote opportunities and collaboration with agencies,
-          design studios and development teams.
-        </p>
-      </div>
+    <p className="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
+      Available for remote opportunities and collaboration with agencies,
+      design studios and development teams.
+    </p>
+  </div>
+</Reveal>
 
       <div className="flex flex-col justify-end">
         <div className="border-t border-zinc-800">
