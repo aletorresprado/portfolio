@@ -18,19 +18,27 @@ export default function Home() {
   </a>
 
   <nav className="hidden items-center gap-8 text-sm text-zinc-500 md:flex">
-    <a className="transition-colors hover:text-black" href="#work">
+    <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-4"
+  href="#work">
       Work
     </a>
 
-    <a className="transition-colors hover:text-black" href="#capabilities">
+    <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-4"
+   href="#capabilities">
       Capabilities
     </a>
 
-     <a className="transition-colors hover:text-black" href="#about">
+     <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-4"
+   href="#about">
       About
     </a>
 
-    <a className="transition-colors hover:text-black" href="#contact">
+    <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
+  focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-4"
+   href="#contact">
       Contact
     </a>
   </nav>
@@ -38,7 +46,7 @@ export default function Home() {
   <div className="flex items-center">
   <div className="hidden items-center gap-2 text-sm md:flex">
     <span className="relative flex size-2">
-      <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+      <span className="absolute inline-flex size-full motion-safe:animate-ping rounded-full bg-emerald-400 opacity-75" />
       <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
     </span>
 
@@ -54,7 +62,8 @@ export default function Home() {
             Remote · Argentina
           </p>
 
-          <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl  text-yellow-500">
+          <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 
+           text-yellow-500">
             I design.
             <br />
             I develop.
@@ -63,8 +72,8 @@ export default function Home() {
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-600 sm:text-xl">
-            Diseño experiencias visuales y construyo soluciones digitales
-            para agencias, estudios y equipos de producto.
+            I design visual experiences and build digital solutions
+            for agencies, studios and product teams.
           </p>
         </div>
 
@@ -105,8 +114,8 @@ export default function Home() {
    <Reveal delay={0}>
   <Link
     href="/work/restaurant-reservation-platform"
-    className="group block h-full bg-white p-8 sm:p-10"
-  >
+    className=" group block bg-white p-8 sm:p-10 focus-visible:outline-none
+  focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-yellow-500">
   <div className="mb-20 flex items-start justify-between">
     <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
       Full Stack
@@ -146,8 +155,8 @@ export default function Home() {
    <Reveal delay={0.08}>
   <Link
     href="/work/healthcare-management-app"
-    className="group block h-full bg-white p-8 sm:p-10"
-  >
+    className=" group block bg-white p-8 sm:p-10 focus-visible:outline-none
+  focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-yellow-500">
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
             Web Application
@@ -187,8 +196,8 @@ export default function Home() {
     <Reveal delay={0.16}>
   <Link
     href="/work/bookstore-api"
-    className="group block h-full bg-white p-8 sm:p-10"
-  >
+    className=" group block bg-white p-8 sm:p-10 focus-visible:outline-none
+  focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-yellow-500">
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
             Backend
@@ -227,9 +236,10 @@ export default function Home() {
 {/* Graphic Design */}
 <Reveal delay={0.24}>
   <Link
-    href="/work/graphic-design-archive"
-    className="group block h-full bg-zinc-950 p-8 text-white sm:p-10"
-  >
+  href="/work/graphic-design-archive"
+  className="
+    group block h-full bg-zinc-950 p-8 text-white sm:p-10 focus-visible:outline-none
+    focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-yellow-500">
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em]  text-zinc-400">
             Graphic Design
@@ -386,6 +396,19 @@ export default function Home() {
       <br />
       Technical by nature.
     </p>
+
+    <a
+      href="/cv/alejandro-torres-cv.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group mt-8 inline-flex items-center gap-3 border-b border-zinc-300 pb-1 text-sm transition-colors duration-300 hover:font-semibold hover:border-yellow-500"
+    >
+      View Resume
+
+      <span className="transition-transform duration-300 group-hover:translate-x-1">
+        ↗
+      </span>
+    </a>
   </div>
 </Reveal>
 

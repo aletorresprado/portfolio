@@ -100,9 +100,9 @@ export default function GraphicDesignArchive() {
 
   {/* CAFÉ CIENTÍFICO — Sistema */}
   <div>
-    <div className="mb-8 flex items-end justify-between gap-6">
+    <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+        <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
           Visual System
         </p>
 
@@ -111,7 +111,7 @@ export default function GraphicDesignArchive() {
         </h2>
       </div>
 
-      <p className="max-w-sm text-right text-sm leading-6 text-zinc-500">
+      <p className="max-w-sm text-sm leading-6 text-zinc-500 sm:text-right">
         A recurring visual identity built through repetition, hierarchy and
         controlled variation.
       </p>
@@ -119,21 +119,30 @@ export default function GraphicDesignArchive() {
 
     <div className="grid gap-4 md:grid-cols-3">
   {[
-    "/design/cafe-cientifico-01.webp",
-    "/design/cafe-cientifico-02.webp",
-    "/design/cafe-cientifico-03.webp",
-  ].map((src, index) => (
-    <div key={src} className="group overflow-hidden bg-zinc-100">
-      <Image
-        src={src}
-        alt={`Café Científico visual identity ${index + 1}`}
-        width={1200}
-        height={1500}
-        sizes="(max-width: 768px) 100vw, 33vw"
-        className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-      />
-    </div>
-  ))}
+  {
+    src: "/design/cafe-cientifico-01.webp",
+    alt: "Café Científico event poster and visual communication design",
+  },
+  {
+    src: "/design/cafe-cientifico-02.webp",
+    alt: "Café Científico promotional graphic using the event visual identity",
+  },
+  {
+    src: "/design/cafe-cientifico-03.webp",
+    alt: "Café Científico communication piece with consistent visual system",
+  },
+].map((image) => (
+  <div key={image.src} className="group overflow-hidden bg-zinc-100">
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width={1200}
+      height={1500}
+      sizes="(max-width: 768px) 100vw, 33vw"
+      className="h-auto w-full transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+    />
+  </div>
+))}
 </div>
   </div>
 

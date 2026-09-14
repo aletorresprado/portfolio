@@ -13,12 +13,27 @@ export default function MobileMenu() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
+  document.body.style.overflow = open ? "hidden" : "";
 
+  if (!open) {
     return () => {
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      setOpen(false);
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+
+  return () => {
+    document.body.style.overflow = "";
+    window.removeEventListener("keydown", handleKeyDown);
+  };
+}, [open]);
 
   return (
     <>
@@ -27,21 +42,26 @@ export default function MobileMenu() {
         onClick={() => setOpen(true)}
         aria-label="Open menu"
         aria-expanded={open}
-        className="flex size-11 items-center justify-center rounded-lg bg-yellow-500 md:hidden"
-      >
+        className=" flex size-11 items-center justify-center rounded-lg bg-yellow-500 md:hidden
+                    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black
+                    focus-visible:ring-offset-2"
+                    >
         <div className="flex w-5 flex-col gap-[5px]">
           <span className="h-px w-full bg-black" />
           <span className="h-px w-full bg-black" />
         </div>
       </button>
 
-      <div
-        className={`fixed inset-0 z-50 bg-zinc-950 text-white transition-all duration-500 md:hidden ${
-          open
-            ? "pointer-events-auto opacity-100"
-            : "pointer-events-none opacity-0"
-        }`}
-      >
+     <div
+  role="dialog"
+  aria-modal="true"
+  aria-label="Main navigation"
+  className={`fixed inset-0 z-50 bg-zinc-950 text-white transition-all duration-500 md:hidden ${
+    open
+      ? "pointer-events-auto opacity-100"
+      : "pointer-events-none opacity-0"
+  }`}
+>
         <div className="flex min-h-dvh flex-col px-6 py-8 sm:px-10">
 
           {/* Header */}
@@ -54,8 +74,10 @@ export default function MobileMenu() {
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close menu"
-              className="flex size-11 items-center justify-center rounded-lg bg-yellow-500 text-black"
-            >
+              className=" flex size-11 items-center justify-center rounded-lg bg-yellow-500 text-black
+                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white
+                          focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+                         >
               <span className="text-2xl font-bold leading-none">×</span>
             </button>
           </div>
