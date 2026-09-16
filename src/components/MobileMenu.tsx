@@ -42,14 +42,14 @@ export default function MobileMenu() {
         onClick={() => setOpen(true)}
         aria-label="Open menu"
         aria-expanded={open}
-        className=" flex size-11 items-center justify-center rounded-lg bg-yellow-500 md:hidden
+        className=" flex size-11 items-center justify-center rounded-lg bg-yellow-700 md:hidden
                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black
                     focus-visible:ring-offset-2"
                     >
-        <div className="flex w-5 flex-col gap-[5px]">
-          <span className="h-px w-full bg-black" />
-          <span className="h-px w-full bg-black" />
-        </div>
+       <div className="flex w-5 flex-col gap-[5px]">
+  <span className="h-[2px] w-full bg-white" />
+  <span className="h-[2px] w-full bg-white" />
+</div>
       </button>
 
      <div
