@@ -161,7 +161,7 @@ export default function GraphicDesignArchive() {
 
   <div className="flex min-h-[420px] items-end bg-zinc-950 p-8 text-white sm:p-10">
     <div>
-      <p className="text-xs uppercase tracking-[0.2em] text-zinc-600">
+      <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
         Art Direction
       </p>
 
@@ -196,13 +196,12 @@ export default function GraphicDesignArchive() {
 </div>
   
 
-  {/* EDITORIAL — Folleto territorial */}
 {/* EDITORIAL — Folleto territorial */}
 <div className="py-12 lg:py-20">
   <div className="mx-auto max-w-5xl">
 
     <div className="mb-10">
-      <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+      <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
         Editorial Design
       </p>
 
@@ -226,18 +225,30 @@ export default function GraphicDesignArchive() {
     {/* Detalles editoriales */}
     <div className="mx-auto mt-12 grid max-w-4xl gap-8 md:grid-cols-2 lg:gap-10">
       {[
-        "/design/editorial-territorio-main-01.webp",
-        "/design/editorial-territorio-main-02.webp",
-        "/design/editorial-territorio-main-03.webp",
-        "/design/editorial-territorio-main-04.webp",
-      ].map((src, index) => (
+        {
+          src: "/design/editorial-territorio-main-01.webp",
+          alt: "Territorial editorial design showing information layout and visual hierarchy",
+        },
+        {
+          src: "/design/editorial-territorio-main-02.webp",
+          alt: "Territorial editorial design with structured text and graphic elements",
+        },
+        {
+          src: "/design/editorial-territorio-main-03.webp",
+          alt: "Territorial editorial layout combining imagery, typography and information",
+        },
+        {
+          src: "/design/editorial-territorio-main-04.webp",
+          alt: "Territorial editorial design detail showing the publication visual system",
+        },
+      ].map((image) => (
         <div
-          key={src}
+          key={image.src}
           className="group relative aspect-[4/3] overflow-hidden"
         >
           <Image
-            src={src}
-            alt={`Territorial editorial design detail ${index + 1}`}
+            src={image.src}
+            alt={image.alt}
             fill
             sizes="(max-width: 768px) 100vw, 420px"
             className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
@@ -252,7 +263,7 @@ export default function GraphicDesignArchive() {
   {/* WORKSHOP — Campaña */}
 <div>
   <div className="mb-8">
-    <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
+    <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
       Campaign System
     </p>
 
@@ -278,16 +289,22 @@ export default function GraphicDesignArchive() {
     {/* Aplicaciones */}
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
       {[
-        "/design/workshop-01.webp",
-        "/design/workshop-02.webp",
-      ].map((src, index) => (
+        {
+          src: "/design/workshop-01.webp",
+          alt: "Electron microscopy workshop campaign applied to promotional communication",
+        },
+        {
+          src: "/design/workshop-02.webp",
+          alt: "Electron microscopy workshop visual identity applied to event communication",
+        },
+      ].map((image) => (
         <div
-          key={src}
+          key={image.src}
           className="group relative aspect-[4/3] overflow-hidden"
         >
           <Image
-            src={src}
-            alt={`Electron microscopy workshop application ${index + 1}`}
+            src={image.src}
+            alt={image.alt}
             fill
             sizes="(max-width: 1024px) 50vw, 40vw"
             className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
@@ -301,7 +318,7 @@ export default function GraphicDesignArchive() {
 </div>
 <section className="bg-zinc-950 px-6 py-24 text-white sm:px-10 md:px-16 lg:px-24 lg:py-32">
   <div className="mx-auto max-w-7xl">
-    <p className="text-sm uppercase tracking-[0.2em] text-zinc-600">
+    <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">
       02 — Selected Identities
     </p>
 
@@ -312,63 +329,96 @@ export default function GraphicDesignArchive() {
     </h2>
 
    <div className="mt-20 grid gap-8 md:grid-cols-2 lg:gap-10">
-  {[
-    "/design/identity-01.svg",
-    "/design/identity-02.svg",
-    "/design/identity-03.svg",
-    "/design/identity-04.svg",
-    "/design/identity-05.svg",
-    "/design/identity-06.svg",
-    "/design/identity-07.svg",
-  ].map((src, index) => (
+{[
+  {
+    src: "/design/identity-01.svg",
+    alt: "Visual identity for Alessandro Pizzaiolo",
+  },
+  {
+    src: "/design/identity-02.svg",
+    alt: "Visual identity for Forni Alessandro",
+  },
+  {
+    src: "/design/identity-03.svg",
+    alt: "Visual identity for 4 Ruedas Tucumán",
+  },
+  {
+    src: "/design/identity-04.svg",
+    alt: "Visual identity for Altos del Rosario private residential community",
+  },
+  {
+    src: "/design/identity-05.svg",
+    alt: "Visual identity for Centro Integral de Microscopía Electrónica",
+  },
+  {
+    src: "/design/identity-06.svg",
+    alt: "Visual identity for Eureka science radio program",
+  },
+  {
+    src: "/design/identity-07.svg",
+    alt: "Visual identity for Talaka craft brewery",
+  },
+].map((image, index) => (
+  <div
+    key={image.src}
+    className={`group flex min-h-[38vh] items-center justify-center bg-white p-12 sm:p-16 lg:p-20 ${
+      index === 6 ? "md:col-span-2" : ""
+    }`}
+  >
     <div
-      key={src}
-      className={`group flex min-h-[38vh] items-center justify-center bg-white p-12 sm:p-16 lg:p-20 ${
-        index === 6 ? "md:col-span-2" : ""
+      className={`relative w-full transition-transform duration-500 group-hover:scale-[1.03] ${
+        index === 6
+          ? "h-44 max-w-lg sm:h-52"
+          : "h-36 max-w-sm sm:h-44"
       }`}
     >
-      <div
-        className={`relative w-full transition-transform duration-500 group-hover:scale-[1.03] ${
+      <Image
+        src={image.src}
+        alt={image.alt}
+        fill
+        sizes={
           index === 6
-            ? "h-44 max-w-lg sm:h-52"
-            : "h-36 max-w-sm sm:h-44"
-        }`}
-      >
-        <Image
-          src={src}
-          alt={`Selected visual identity ${index + 1}`}
-          fill
-          sizes={
-            index === 6
-              ? "(max-width: 768px) 75vw, 500px"
-              : "(max-width: 768px) 70vw, 360px"
-          }
-          className="object-contain"
-          unoptimized
-        />
-      </div>
+            ? "(max-width: 768px) 75vw, 500px"
+            : "(max-width: 768px) 70vw, 360px"
+        }
+        className="object-contain"
+        unoptimized
+      />
     </div>
-  ))}
+  </div>
+))}
 </div>
   </div>
 </section>
 <section className="bg-white px-6 py-24 text-black sm:px-10 md:px-16 lg:px-24 lg:py-32">
   <div className="mx-auto max-w-7xl">
-    <p className="max-w-5xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
+    <p className="max-w-5xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-700">
       Design taught me how to see.
       <br />
       Development taught me how to build.
     </p>
 
     <Link
-      href="/#work"
-      className="group mt-16 inline-flex items-center gap-4 text-lg"
-    >
-      Back to selected work
-      <span className="transition-transform duration-300 group-hover:translate-x-2">
-        →
-      </span>
-    </Link>
+        href="/#work"
+        className="
+          group mt-16 inline-flex cursor-pointer items-center gap-4 text-lg
+          transition-all duration-200
+          hover:font-semibold
+          focus-visible:outline-none
+          focus-visible:ring-2
+          focus-visible:ring-yellow-700
+          focus-visible:ring-offset-4
+        "
+      >
+        Back to selected work
+
+        <span
+          aria-hidden="true"
+          className="transition-transform duration-300 group-hover:translate-x-2 group-focus-visible:translate-x-2"
+        >
+          →
+        </span>
+      </Link>
   </div>
 </section>
     </main>

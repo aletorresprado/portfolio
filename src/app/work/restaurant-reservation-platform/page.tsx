@@ -35,7 +35,7 @@ export default function RestaurantReservationPlatform() {
               Full Stack · 2026 · Work in progress
             </p>
 
-            <h1 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-[-0.05em] sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-[-0.05em] sm:text-6xl md:text-7xl lg:text-8xl text-yellow-700">
               Restaurant
               <br />
               Reservation
@@ -94,7 +94,7 @@ export default function RestaurantReservationPlatform() {
       </div>
 
       <div>
-        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-700">
           One reservation system.
           <br />
           Multiple branches.
@@ -124,7 +124,7 @@ export default function RestaurantReservationPlatform() {
       </div>
 
       <div>
-        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-700">
           A connected product for customers and restaurant operations.
         </h2>
 
@@ -181,7 +181,7 @@ export default function RestaurantReservationPlatform() {
       </div>
 
       <div>
-        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-500">
           One ecosystem.
           <br />
           Shared business logic.
@@ -318,7 +318,7 @@ export default function RestaurantReservationPlatform() {
       </div>
 
       <div>
-        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-700">
           Built around the real reservation workflow.
         </h2>
 
@@ -391,8 +391,8 @@ export default function RestaurantReservationPlatform() {
         </p>
       </div>
 
-      <div>
-        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+      <div> 
+        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-700">
           Structure before complexity.
         </h2>
 
@@ -460,7 +460,7 @@ export default function RestaurantReservationPlatform() {
 
     <div className="mt-10 flex flex-col justify-between gap-12 lg:flex-row lg:items-end">
       <div>
-        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl">
+        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
           Work in progress.
         </h2>
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import MobileMenu from "@/components/MobileMenu";
 import Reveal from "@/components/Reveal";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,12 +11,20 @@ export default function Home() {
         className="flex min-h-screen flex-col justify-between px-6 py-8 sm:px-10 md:px-16 lg:px-24"
       >
         <header className="flex items-center justify-between">
-  <a
-    href="#home"
-    className="text-sm font-medium tracking-[0.2em] uppercase"
-  >
-    Alejandro Torres
-  </a>
+        <a
+        href="#top"
+        className="
+          cursor-pointer text-sm font-medium uppercase tracking-[0.2em]
+          transition-all duration-200
+          hover:font-semibold
+          focus-visible:outline-none
+          focus-visible:ring-2
+          focus-visible:ring-yellow-700
+          focus-visible:ring-offset-4
+        "
+      >
+        Alejandro Torres
+      </a>
 
   <nav className="hidden items-center gap-8 text-sm text-zinc-500 md:flex">
     <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
@@ -45,7 +54,7 @@ export default function Home() {
 
   <div className="flex items-center">
   <div className="hidden items-center gap-2 text-sm md:flex">
-    <span className="relative flex size-2">
+    <span aria-hidden="true" className="relative flex size-2">
       <span className="absolute inline-flex size-full motion-safe:animate-ping rounded-full bg-emerald-400 opacity-75" />
       <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
     </span>
@@ -63,7 +72,7 @@ export default function Home() {
           </p>
 
           <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 
-           text-yellow-500">
+           text-yellow-700">
             I design.
             <br />
             I develop.
@@ -95,7 +104,7 @@ export default function Home() {
           01 — Selected Work
         </p>
 
-        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl  text-yellow-500">
+        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl  text-yellow-700">
           Work that solves
           <br />
           real problems.
@@ -151,46 +160,66 @@ export default function Home() {
       </Link>
     </Reveal>
 
-{/* Healthcare */}
-   <Reveal delay={0.08}>
+{/* Web Development */}
+<Reveal delay={0.08}>
   <Link
-    href="/work/healthcare-management-app"
-    className=" group block bg-white p-8 sm:p-10 focus-visible:outline-none
-  focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-yellow-500">
-        <div className="mb-20 flex items-start justify-between">
-          <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-            Web Application
-          </span>
+    href="/work/web-development"
+    className="
+      group block bg-white p-8 sm:p-10
+      focus-visible:outline-none
+      focus-visible:ring-2
+      focus-visible:ring-inset
+      focus-visible:ring-yellow-500
+    "
+  >
+    <div className="mb-20 flex items-start justify-between">
+      <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+        Web Development
+      </span>
 
-          <span className="text-xs text-zinc-400">
-            2025
-          </span>
-        </div>
+      <span className="text-xs text-zinc-500">
+        2026
+      </span>
+    </div>
 
-        <div>
-          <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
-  Healthcare
-  <br />
-  Management App
-</h3>
+    <div>
+      <h3
+        className="
+          text-3xl font-medium tracking-tight
+          transition-transform duration-300
+          group-hover:translate-x-2
+          group-focus-visible:translate-x-2
+        "
+      >
+        Digital
+        <br />
+        Experiences
+      </h3>
 
-          <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
-            Role-based healthcare application for patients, professionals and
-            administrators.
-          </p>
+      <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
+        Design and development of modern web experiences from concept to
+        production.
+      </p>
 
-          <div className="mt-8 flex items-end justify-between gap-6">
-  <p className="text-sm text-zinc-400">
-    React · Tailwind · React Hook Form · Zod
-  </p>
+      <div className="mt-8 flex items-end justify-between gap-6">
+        <p className="text-sm text-zinc-500">
+          Next.js · React · TypeScript · Tailwind
+        </p>
 
-  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
-    ↗
-  </span>
-</div>
-        </div>
-      </Link>
-    </Reveal>
+        <span
+          aria-hidden="true"
+          className="
+            text-xl transition-transform duration-300
+            group-hover:translate-x-1
+            group-focus-visible:translate-x-1
+          "
+        >
+          ↗
+        </span>
+      </div>
+    </div>
+  </Link>
+</Reveal>
 
 {/* Bookstore */}
     <Reveal delay={0.16}>
@@ -384,87 +413,109 @@ export default function Home() {
 >
   <div className="mx-auto grid max-w-7xl gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
     <Reveal y={18}>
-  <div>
-    <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-      03 — About
-    </p>
-
-    <p className="max-w-xs text-sm leading-relaxed text-zinc-500">
-      Designer by training.
-      <br />
-      Developer by evolution.
-      <br />
-      Technical by nature.
-    </p>
-
-    <a
-      href="/cv/alejandro-torres-cv.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group mt-8 inline-flex items-center gap-3 border-b border-zinc-300 pb-1 text-sm transition-colors duration-300 hover:font-semibold hover:border-yellow-500"
-    >
-      View Resume
-
-      <span className="transition-transform duration-300 group-hover:translate-x-1">
-        ↗
-      </span>
-    </a>
-  </div>
-</Reveal>
-
-    <div>
-      <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
-        I combine visual thinking, software development and technical problem
-        solving.
-      </h2>
-
-      <div className="mt-12 grid gap-8 border-t border-zinc-200 pt-10 md:grid-cols-2">
-        <p className="leading-relaxed text-zinc-600">
-          I am a graphic designer with a multidisciplinary professional
-          background that has evolved toward software development, digital
-          products and applied technology.
+      <div>
+        <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
+          03 — About
         </p>
 
-        <p className="leading-relaxed text-zinc-600">
-          My experience in scientific and technical environments has trained
-          me to work with precision, complex processes and interdisciplinary
-          teams, while design gives me a strong visual and user-centered
-          perspective.
+        <p className="max-w-xs text-sm leading-relaxed text-zinc-500">
+          Designer by training.
+          <br />
+          Developer by evolution.
+          <br />
+          Technical by nature.
         </p>
+
+        <div className="mt-8 flex flex-col items-start gap-5">
+          <Link
+            href="/about"
+            className="
+              group inline-flex items-center gap-3
+              border-b border-yellow-700 pb-1
+              text-sm font-medium
+              transition-colors duration-300
+              hover:text-yellow-700
+              focus-visible:outline-none
+              focus-visible:ring-2
+              focus-visible:ring-yellow-700
+              focus-visible:ring-offset-4
+            "
+          >
+            More about me
+
+            <span
+              aria-hidden="true"
+              className="
+                transition-transform duration-300
+                group-hover:translate-x-1
+                group-focus-visible:translate-x-1
+              "
+            >
+              →
+            </span>
+          </Link>
+
+          <a
+            href="/cv/alejandro-torres-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              group inline-flex items-center gap-3
+              text-sm text-zinc-500
+              transition-colors duration-300
+              hover:text-black
+              focus-visible:outline-none
+              focus-visible:ring-2
+              focus-visible:ring-yellow-700
+              focus-visible:ring-offset-4
+            "
+          >
+            View Resume
+
+            <span
+              aria-hidden="true"
+              className="
+                transition-transform duration-300
+                group-hover:-translate-y-0.5
+                group-hover:translate-x-0.5
+                group-focus-visible:-translate-y-0.5
+                group-focus-visible:translate-x-0.5
+              "
+            >
+              ↗
+            </span>
+          </a>
+        </div>
       </div>
+    </Reveal>
 
-      <div className="mt-16 grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 sm:grid-cols-3">
-        <div className="bg-white p-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Focus
-          </p>
-          <p className="mt-3 text-lg">
-            Digital Products
-          </p>
-        </div>
+    <Reveal y={18} delay={0.08}>
+      <div>
+        <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl">
+          Different disciplines.
+          <br />
+          <span className="text-yellow-700">
+            One way of thinking.
+          </span>
+        </h2>
 
-        <div className="bg-white p-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Collaboration
-          </p>
-          <p className="mt-3 text-lg">
-            Remote Teams
-          </p>
-        </div>
+        <p className="mt-10 max-w-2xl text-lg leading-relaxed text-zinc-600">
+          A multidisciplinary background shaped by design, technology,
+          science and code — bringing visual thinking and technical
+          problem-solving into the same creative process.
+        </p>
 
-        <div className="bg-white p-6">
-          <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-            Based in
-          </p>
-          <p className="mt-3 text-lg">
-            Argentina
-          </p>
+        <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-zinc-200 pt-8 text-sm text-zinc-500">
+          <span>Design</span>
+          <span>Development</span>
+          <span>Technology</span>
+          <span>Scientific background</span>
         </div>
       </div>
-    </div>
+    </Reveal>
   </div>
-
 </section>
+
 
 {/* contact */}
 <section
@@ -566,11 +617,48 @@ export default function Home() {
       </div>
     </div>
 
-    <footer className="mt-24 flex flex-col gap-4 border-t border-zinc-800 pt-8 text-sm text-yellow-500 sm:flex-row sm:items-center sm:justify-between">
-      <p>© 2026 Alejandro Torres</p>
+   <footer className="mt-24 border-t border-zinc-800 pt-8">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
 
-      <p>Designer × Developer</p>
-    </footer>
+          <div className="flex items-center gap-4">
+            <a
+              href="#home"
+              aria-label="Back to top"
+              className="
+                shrink-0 cursor-pointer rounded-xl
+                transition-transform duration-300
+                hover:scale-105
+                focus-visible:outline-none
+                focus-visible:ring-2
+                focus-visible:ring-yellow-500
+                focus-visible:ring-offset-4
+                focus-visible:ring-offset-zinc-950
+              "
+            >
+              <Image
+                src="/icon.svg"
+                alt=""
+                width={44}
+                height={44}
+                aria-hidden="true"
+                className="size-11"
+              />
+            </a>
+
+            <p className="text-sm text-zinc-400">
+              Desarrollo:{" "}
+              <span className="font-medium text-white">
+                Alejandro Torres
+              </span>
+            </p>
+          </div>
+
+          <p className="text-sm text-zinc-400">
+            © 2026
+          </p>
+
+        </div>
+      </footer>
   </div>
 </section>
     </main>

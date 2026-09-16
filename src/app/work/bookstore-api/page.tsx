@@ -35,7 +35,7 @@ export default function BookstoreApi() {
               Backend · 2025
             </p>
 
-            <h1 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-[-0.05em] sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-[-0.05em] sm:text-6xl md:text-7xl lg:text-8xl text-yellow-700">
               Bookstore
               <br />
               API
@@ -90,7 +90,7 @@ export default function BookstoreApi() {
             </div>
 
             <div>
-              <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-700">
                 More than storing users.
               </h2>
 
@@ -118,7 +118,7 @@ export default function BookstoreApi() {
             </div>
 
             <div>
-              <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+              <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-700">
                 A predictable request pipeline.
               </h2>
 
@@ -161,7 +161,7 @@ export default function BookstoreApi() {
       </div>
 
       <div>
-        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-500">
           Trust starts
           <br />
           at the API.
@@ -260,7 +260,7 @@ export default function BookstoreApi() {
       </div>
 
       <div>
-        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl">
+        <h2 className="max-w-3xl text-3xl font-medium leading-tight tracking-tight sm:text-4xl md:text-5xl text-yellow-700">
           Understanding what
           <br />
           happens behind the UI.
@@ -310,7 +310,7 @@ export default function BookstoreApi() {
 
     <div className="mt-10 flex flex-col justify-between gap-12 lg:flex-row lg:items-end">
       <div>
-        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl">
+        <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
           From backend logic
           <br />
           back to visual thinking.
