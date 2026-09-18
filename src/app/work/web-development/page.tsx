@@ -90,7 +90,7 @@ export default function WebDevelopmentPage() {
       </div>
         {/* Screenshot will go here */}
       <a
-  href="https://intelligentbusiness.vercel.app/"
+  href="https://intelligentbusiness.ar"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="Visit Intelligent Business live site"
@@ -160,7 +160,7 @@ export default function WebDevelopmentPage() {
           sm:flex-row sm:items-center sm:gap-8
         ">
           <a
-            href="https://intelligentbusiness.vercel.app/"
+            href="https://intelligentbusiness.ar/"
             target="_blank"
             rel="noopener noreferrer"
             className="
