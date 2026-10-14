@@ -221,43 +221,32 @@ export default function Home() {
   </Link>
 </Reveal>
 
-{/* Bookstore */}
+{/* Weather App */}
     <Reveal delay={0.16}>
-  <Link
-    href="/work/bookstore-api"
-    className=" group block bg-white p-8 sm:p-10 focus-visible:outline-none
-  focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-yellow-500">
+      <Link
+        href="/work/weather-app"
+        className="group block bg-white p-8 sm:p-10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-yellow-500"
+      >
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-            Backend
+            Mobile Development
           </span>
-
-          <span className="text-xs text-zinc-400">
-            2025
-          </span>
+          <span className="text-xs text-zinc-400">2026 · In development</span>
         </div>
-
         <div>
           <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
-            Bookstore
-            <br />
-            API
+            Weather<br />App
           </h3>
-
           <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
-            Backend architecture with authentication, user management and
-            transactional email workflows.
+            A mobile weather-awareness app exploring location-based forecasts,
+            atmospheric conditions and experimental environmental alerts.
           </p>
-
-         <div className="mt-8 flex items-end justify-between gap-6">
-  <p className="text-sm text-zinc-400">
-    Node.js · Express · MongoDB · JWT
-  </p>
-
-  <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
-    ↗
-  </span>
-</div>
+          <div className="mt-8 flex items-end justify-between gap-6">
+            <p className="text-sm text-zinc-400">
+              React Native · Expo · TypeScript · Open-Meteo
+            </p>
+            <span aria-hidden="true" className="text-xl transition-transform duration-300 group-hover:translate-x-1">↗</span>
+          </div>
         </div>
       </Link>
     </Reveal>
