@@ -1,15 +1,20 @@
+import { getTranslator } from "@/lib/i18n/server";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 
-export const metadata: Metadata = {
-  title: "Graphic Design Archive",
-  description:
-    "Selected work across visual identity, editorial design, cultural communication and scientific communication.",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslator();
+  return {
+    title: t("Graphic Design Archive"),
+    description:
+      t("Selected work across visual identity, editorial design, cultural communication and scientific communication."),
+  };
+}
 
-export default function GraphicDesignArchive() {
+export default async function GraphicDesignArchive() {
+  const t = await getTranslator();
   return (
     <main className="min-h-screen bg-zinc-950 text-white">
       <header className="px-6 py-8 sm:px-10 md:px-16 lg:px-24">
@@ -25,7 +30,7 @@ export default function GraphicDesignArchive() {
             href="/#work"
             className="text-sm text-zinc-500 transition-colors hover:text-white"
           >
-            ← Back to work
+            {t("← Back to work")}
           </Link>
         </div>
       </header>
@@ -33,30 +38,25 @@ export default function GraphicDesignArchive() {
       <section className="flex min-h-[calc(100vh-96px)] items-end px-6 pb-12 sm:px-10 sm:pb-16 md:px-16 lg:px-24 lg:pb-20">
         <div className="mx-auto w-full max-w-7xl">
           <p className="mb-8 text-sm uppercase tracking-[0.2em] text-zinc-500">
-            Selected Visual Work
+            {t("Selected Visual Work")}
           </p>
 
           <h1 className="text-[17vw] font-medium uppercase leading-[0.72] tracking-[-0.075em] sm:text-[15vw] lg:text-[12rem] text-yellow-500">
-            Graphic
-            <br />
-            Design
-            <br />
-            Archive
+            <span className="whitespace-pre-line">{t("Graphic\nDesign\nArchive")}</span>
           </h1>
 
           <div className="mt-14 grid gap-8 border-t border-zinc-800 pt-8 md:grid-cols-2">
             <p className="max-w-md text-lg leading-8 text-zinc-400">
-              Selected work across visual identity, editorial design,
-              cultural communication and scientific communication.
+              {t("Selected work across visual identity, editorial design, cultural communication and scientific communication.")}
             </p>
 
             <div className="md:text-right">
               <p className="text-sm uppercase tracking-[0.2em] text-zinc-600">
-                Direction
+                {t("Direction")}
               </p>
 
               <p className="mt-2 text-sm text-zinc-400">
-                Art Direction · Typography · Composition · Identity
+                {t("Art Direction · Typography · Composition · Identity")}
               </p>
             </div>
           </div>
@@ -67,13 +67,13 @@ export default function GraphicDesignArchive() {
       <section className="bg-white px-6 py-24 text-black sm:px-10 md:px-16 lg:px-24 lg:py-32">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">
-            01 — Selected Work
+            {t("01 — Selected Work")}
           </p>
 
     <div className="group mt-16 overflow-hidden border border-zinc-200 bg-zinc-100">
   <Image
     src="/design/portada.webp"
-    alt="Graphic Design Archive cover"
+    alt={t("Graphic Design Archive cover")}
     width={2400}
     height={1350}
     priority
@@ -89,7 +89,7 @@ export default function GraphicDesignArchive() {
 <div className="group w-full overflow-hidden bg-zinc-100">
   <Image
     src="/design/forensic-microscopy.webp"
-    alt="Microscopy and Forensic Science visual communication"
+    alt={t("Microscopy and Forensic Science visual communication")}
     width={2400}
     height={1680}
     priority
@@ -103,7 +103,7 @@ export default function GraphicDesignArchive() {
     <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
       <div>
         <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-          Visual System
+          {t("Visual System")}
         </p>
 
         <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-500">
@@ -112,8 +112,7 @@ export default function GraphicDesignArchive() {
       </div>
 
       <p className="max-w-sm text-sm leading-6 text-zinc-500 sm:text-right">
-        A recurring visual identity built through repetition, hierarchy and
-        controlled variation.
+        {t("A recurring visual identity built through repetition, hierarchy and controlled variation.")}
       </p>
     </div>
 
@@ -135,7 +134,7 @@ export default function GraphicDesignArchive() {
   <div key={image.src} className="group overflow-hidden bg-zinc-100">
     <Image
       src={image.src}
-      alt={image.alt}
+      alt={t(image.alt)}
       width={1200}
       height={1500}
       sizes="(max-width: 768px) 100vw, 33vw"
@@ -151,7 +150,7 @@ export default function GraphicDesignArchive() {
   <div className="group overflow-hidden bg-zinc-100">
     <Image
       src="/design/recital-piano.webp"
-      alt="Piano and chamber music recital poster"
+      alt={t("Piano and chamber music recital poster")}
       width={1600}
       height={2000}
       sizes="(max-width: 1024px) 100vw, 55vw"
@@ -162,15 +161,15 @@ export default function GraphicDesignArchive() {
   <div className="flex min-h-[420px] items-end bg-zinc-950 p-8 text-white sm:p-10">
     <div>
       <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">
-        Art Direction
+        {t("Art Direction")}
       </p>
 
       <p className="mt-6 max-w-md text-4xl font-medium leading-tight tracking-tight sm:text-5xl text-yellow-500">
-        Image,
+        {t("Image,")}
         <br />
-        typography
+        {t("typography")}
         <br />
-        and tension.
+        {t("and tension.")}
       </p>
     </div>
   </div>
@@ -182,7 +181,7 @@ export default function GraphicDesignArchive() {
     <div className="group relative aspect-[3/4] overflow-hidden border border-zinc-200 bg-zinc-100">
       <Image
         src="/design/recital-flautas.webp"
-        alt="Flute recital visual communication"
+        alt={t("Flute recital visual communication")}
         fill
         sizes="(max-width: 768px) 100vw, 768px"
         className="object-contain p-4 transition-transform duration-700 ease-out group-hover:scale-[1.02] sm:p-6"
@@ -190,7 +189,7 @@ export default function GraphicDesignArchive() {
     </div>
 
     <p className="mt-6 text-sm text-zinc-500">
-      Cultural communication · Typography · Composition
+      {t("Cultural communication · Typography · Composition")}
     </p>
   </div>
 </div>
@@ -202,11 +201,11 @@ export default function GraphicDesignArchive() {
 
     <div className="mb-10">
       <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-        Editorial Design
+        {t("Editorial Design")}
       </p>
 
       <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-500">
-        Information as visual structure
+        {t("Information as visual structure")}
       </h2>
     </div>
 
@@ -214,7 +213,7 @@ export default function GraphicDesignArchive() {
     <div className="group mx-auto max-w-4xl overflow-hidden bg-zinc-100">
       <Image
         src="/design/editorial-territorio-main-00.webp"
-        alt="Territorial editorial design"
+        alt={t("Territorial editorial design")}
         width={2400}
         height={1050}
         sizes="(max-width: 768px) 100vw, 900px"
@@ -248,7 +247,7 @@ export default function GraphicDesignArchive() {
         >
           <Image
             src={image.src}
-            alt={image.alt}
+            alt={t(image.alt)}
             fill
             sizes="(max-width: 768px) 100vw, 420px"
             className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
@@ -264,11 +263,11 @@ export default function GraphicDesignArchive() {
 <div>
   <div className="mb-8">
     <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-      Campaign System
+      {t("Campaign System")}
     </p>
 
     <h2 className="mt-3 text-3xl font-medium tracking-tight sm:text-4xl text-yellow-500">
-      One identity. Multiple applications.
+      {t("One identity. Multiple applications.")}
     </h2>
   </div>
 
@@ -278,7 +277,7 @@ export default function GraphicDesignArchive() {
     <div className="group overflow-hidden bg-zinc-100">
       <Image
         src="/design/workshop-main.webp"
-        alt="Electron microscopy workshop main visual"
+        alt={t("Electron microscopy workshop main visual")}
         width={1800}
         height={1350}
         sizes="(max-width: 1024px) 100vw, 60vw"
@@ -304,7 +303,7 @@ export default function GraphicDesignArchive() {
         >
           <Image
             src={image.src}
-            alt={image.alt}
+            alt={t(image.alt)}
             fill
             sizes="(max-width: 1024px) 50vw, 40vw"
             className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
@@ -319,13 +318,13 @@ export default function GraphicDesignArchive() {
 <section className="bg-zinc-950 px-6 py-24 text-white sm:px-10 md:px-16 lg:px-24 lg:py-32">
   <div className="mx-auto max-w-7xl">
     <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">
-      02 — Selected Identities
+      {t("02 — Selected Identities")}
     </p>
 
     <h2 className="mt-8 max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-500">
-      Marks built to
+      {t("Marks built to")}
       <br />
-      hold an identity.
+      {t("hold an identity.")}
     </h2>
 
    <div className="mt-20 grid gap-8 md:grid-cols-2 lg:gap-10">
@@ -374,7 +373,7 @@ export default function GraphicDesignArchive() {
     >
       <Image
         src={image.src}
-        alt={image.alt}
+        alt={t(image.alt)}
         fill
         sizes={
           index === 6
@@ -393,9 +392,9 @@ export default function GraphicDesignArchive() {
 <section className="bg-white px-6 py-24 text-black sm:px-10 md:px-16 lg:px-24 lg:py-32">
   <div className="mx-auto max-w-7xl">
     <p className="max-w-5xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl text-yellow-700">
-      Design taught me how to see.
+      {t("Design taught me how to see.")}
       <br />
-      Development taught me how to build.
+      {t("Development taught me how to build.")}
     </p>
 
     <Link
@@ -410,7 +409,7 @@ export default function GraphicDesignArchive() {
           focus-visible:ring-offset-4
         "
       >
-        Back to selected work
+        {t("Back to selected work")}
 
         <span
           aria-hidden="true"

@@ -1,7 +1,9 @@
+import { getTranslator } from "@/lib/i18n/server";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslator();
   return (
     <main className="min-h-screen bg-white text-black">
       {/* Hero */}
@@ -29,11 +31,11 @@ export default function AboutPage() {
               >
                 ←
               </span>
-              Back home
+              {t("Back home")}
             </Link>
 
             <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-              About
+              {t("About")}
             </span>
           </header>
 
@@ -41,19 +43,19 @@ export default function AboutPage() {
             <div className="grid w-full gap-16 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
               <div>
                 <p className="mb-8 text-sm uppercase tracking-[0.2em] text-zinc-500">
-                  Designer × Developer × Technical mindset
+                  {t("Designer × Developer × Technical mindset")}
                 </p>
 
                 <h1 className="text-6xl font-semibold leading-[0.9] tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
-                  Hard to put
+                  {t("Hard to put")}
                   <br />
-                  <span className="text-yellow-700">in one box.</span>
+                  <span className="text-yellow-700">{t("in one box.")}</span>
                 </h1>
 
                 <div className="mt-10 text-lg leading-relaxed text-zinc-700 sm:text-xl">
-                  <p>Designer by training.</p>
-                  <p>Developer by evolution.</p>
-                  <p>Technical by nature.</p>
+                  <p>{t("Designer by training.")}</p>
+                  <p>{t("Developer by evolution.")}</p>
+                  <p>{t("Technical by nature.")}</p>
                 </div>
               </div>
 
@@ -62,7 +64,7 @@ export default function AboutPage() {
   <div className="aspect-[4/5] overflow-hidden rounded-xl bg-zinc-950">
     <Image
       src="/about/alejandro-creative.webp"
-      alt="Alejandro Torres in a creative workspace combining design, development and science"
+      alt={t("Alejandro Torres in a creative workspace combining design, development and science")}
       width={1200}
       height={1500}
       priority
@@ -75,7 +77,7 @@ export default function AboutPage() {
   </div>
 
   <div className="mt-4 flex items-center justify-between gap-4 text-xs uppercase tracking-[0.16em] text-zinc-500">
-    <span>Design · Code · Science · Ideas</span>
+    <span>{t("Design · Code · Science · Ideas")}</span>
     <span className="hidden sm:inline">2026</span>
   </div>
 </div>
@@ -83,8 +85,8 @@ export default function AboutPage() {
           </div>
 
           <div className="flex flex-col gap-3 border-t border-zinc-200 pt-6 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-            <p>Argentina · Working worldwide</p>
-            <p>Scroll to know a little more ↓</p>
+            <p>{t("Argentina · Working worldwide")}</p>
+            <p>{t("Scroll to know a little more ↓")}</p>
           </div>
         </div>
       </section>
@@ -93,64 +95,58 @@ export default function AboutPage() {
       <section className="bg-zinc-950 px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">
-            01 — A bit of everything
+            {t("01 — A bit of everything")}
           </p>
 
           <div className="mt-12 grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
             <div>
               <h2 className="text-5xl font-medium leading-[0.95] tracking-tight text-yellow-500 sm:text-6xl lg:text-7xl">
-                One path
+                {t("One path")}
                 <br />
-                was never
+                {t("was never")}
                 <br />
-                enough.
+                {t("enough.")}
               </h2>
             </div>
 
             <div className="max-w-2xl space-y-6 text-base leading-relaxed text-zinc-300 sm:text-lg">
               <p>
-                I started with design, where I learned to communicate ideas
-                through form, structure and visual language.
+                {t("I started with design, where I learned to communicate ideas through form, structure and visual language.")}
               </p>
 
               <p>
-                My professional path also took me deep into science and
-                technology, working in highly technical environments where
-                precision, observation and problem-solving are part of everyday
-                work.
+                {t("My professional path also took me deep into science and technology, working in highly technical environments where precision, observation and problem-solving are part of everyday work.")}
               </p>
 
               <p>
-                Then came programming. Not as a replacement for everything
-                before it, but as another way to create.
+                {t("Then came programming. Not as a replacement for everything before it, but as another way to create.")}
               </p>
 
               <p>
-                Today, those worlds naturally overlap in the way I approach
-                projects.
+                {t("Today, those worlds naturally overlap in the way I approach projects.")}
               </p>
             </div>
           </div>
 
           <div className="mt-20 grid gap-px bg-zinc-800 sm:grid-cols-3">
             <div className="bg-zinc-950 py-8 sm:pr-8">
-              <p className="text-sm text-zinc-400">Design taught me</p>
-              <p className="mt-2 text-xl">how to communicate.</p>
+              <p className="text-sm text-zinc-400">{t("Design taught me")}</p>
+              <p className="mt-2 text-xl">{t("how to communicate.")}</p>
             </div>
 
             <div className="bg-zinc-950 py-8 sm:px-8">
-              <p className="text-sm text-zinc-400">Science taught me</p>
-              <p className="mt-2 text-xl">how to observe.</p>
+              <p className="text-sm text-zinc-400">{t("Science taught me")}</p>
+              <p className="mt-2 text-xl">{t("how to observe.")}</p>
             </div>
 
             <div className="bg-zinc-950 py-8 sm:pl-8">
-              <p className="text-sm text-zinc-400">Technology taught me</p>
-              <p className="mt-2 text-xl">how to build.</p>
+              <p className="text-sm text-zinc-400">{t("Technology taught me")}</p>
+              <p className="mt-2 text-xl">{t("how to build.")}</p>
             </div>
           </div>
 
           <p className="mt-14 max-w-2xl text-lg text-zinc-300">
-            Apparently, choosing just one thing was never really my thing.
+            {t("Apparently, choosing just one thing was never really my thing.")}
           </p>
         </div>
       </section>
@@ -159,33 +155,33 @@ export default function AboutPage() {
       <section className="px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-            02 — What I bring
+            {t("02 — What I bring")}
           </p>
 
           <h2 className="mt-8 max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-            Different disciplines.
+            {t("Different disciplines.")}
             <br />
-            <span className="text-yellow-700">One way of thinking.</span>
+            <span className="text-yellow-700">{t("One way of thinking.")}</span>
           </h2>
 
           <div className="mt-20 grid border-y border-zinc-200 md:grid-cols-3">
             <div className="border-b border-zinc-200 py-10 md:border-b-0 md:border-r md:pr-10">
               <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                Design
+                {t("Design")}
               </p>
 
               <div className="mt-8 space-y-3 text-xl">
-                <p>Visual Identity</p>
-                <p>Graphic Design</p>
-                <p>Editorial Design</p>
-                <p>Digital Design</p>
-                <p>UI &amp; Visual Systems</p>
+                <p>{t("Visual Identity")}</p>
+                <p>{t("Graphic Design")}</p>
+                <p>{t("Editorial Design")}</p>
+                <p>{t("Digital Design")}</p>
+                <p>{t("UI & Visual Systems")}</p>
               </div>
             </div>
 
             <div className="border-b border-zinc-200 py-10 md:border-b-0 md:px-10">
               <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                Code
+                {t("Code")}
               </p>
 
               <div className="mt-8 space-y-3 text-xl">
@@ -194,28 +190,27 @@ export default function AboutPage() {
                 <p>TypeScript</p>
                 <p>JavaScript</p>
                 <p>Node.js</p>
-                <p>APIs &amp; Backend Development</p>
+                <p>{t("APIs & Backend Development")}</p>
               </div>
             </div>
 
             <div className="py-10 md:border-l md:border-zinc-200 md:pl-10">
               <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                Technical
+                {t("Technical")}
               </p>
 
               <div className="mt-8 space-y-3 text-xl">
-                <p>Scientific Imaging</p>
-                <p>Electron Microscopy</p>
-                <p>Technical Processes</p>
-                <p>Research Environments</p>
-                <p>Technology &amp; Problem Solving</p>
+                <p>{t("Scientific Imaging")}</p>
+                <p>{t("Electron Microscopy")}</p>
+                <p>{t("Technical Processes")}</p>
+                <p>{t("Research Environments")}</p>
+                <p>{t("Technology & Problem Solving")}</p>
               </div>
             </div>
           </div>
 
           <p className="mt-12 max-w-2xl leading-relaxed text-zinc-600">
-            The tools change. The objective doesn&apos;t: understand the
-            problem, find the right approach and build something useful.
+            {t("The tools change. The objective doesn't: understand the problem, find the right approach and build something useful.")}
           </p>
         </div>
       </section>
@@ -224,29 +219,27 @@ export default function AboutPage() {
       <section className="bg-zinc-100 px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-            03 — How I work
+            {t("03 — How I work")}
           </p>
 
           <h2 className="mt-8 max-w-4xl text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-            Curiosity is usually
+            {t("Curiosity is usually")}
             <br />
-            <span className="text-yellow-700">where it starts.</span>
+            <span className="text-yellow-700">{t("where it starts.")}</span>
           </h2>
 
           <div className="mt-20 grid gap-12 lg:grid-cols-3 lg:gap-10">
             <article className="border-t border-zinc-300 pt-6">
               <span className="text-sm text-zinc-500">01</span>
 
-              <h3 className="mt-8 text-2xl font-medium">Curiosity first.</h3>
+              <h3 className="mt-8 text-2xl font-medium">{t("Curiosity first.")}</h3>
 
               <p className="mt-5 leading-relaxed text-zinc-600">
-                I like understanding how things work before deciding how to
-                build them.
+                {t("I like understanding how things work before deciding how to build them.")}
               </p>
 
               <p className="mt-4 leading-relaxed text-zinc-600">
-                Questions are part of the process. So is taking things apart —
-                sometimes literally, usually conceptually.
+                {t("Questions are part of the process. So is taking things apart — sometimes literally, usually conceptually.")}
               </p>
             </article>
 
@@ -254,34 +247,29 @@ export default function AboutPage() {
               <span className="text-sm text-zinc-500">02</span>
 
               <h3 className="mt-8 text-2xl font-medium">
-                Simple is difficult.
+                {t("Simple is difficult.")}
               </h3>
 
               <p className="mt-5 leading-relaxed text-zinc-600">
-                I like simple solutions. Getting to them is usually the
-                complicated part.
+                {t("I like simple solutions. Getting to them is usually the complicated part.")}
               </p>
 
               <p className="mt-4 leading-relaxed text-zinc-600">
-                Good design and good development have something in common:
-                when they work well, most of the complexity stays behind the
-                scenes.
+                {t("Good design and good development have something in common: when they work well, most of the complexity stays behind the scenes.")}
               </p>
             </article>
 
             <article className="border-t border-zinc-300 pt-6">
               <span className="text-sm text-zinc-500">03</span>
 
-              <h3 className="mt-8 text-2xl font-medium">Keep learning.</h3>
+              <h3 className="mt-8 text-2xl font-medium">{t("Keep learning.")}</h3>
 
               <p className="mt-5 leading-relaxed text-zinc-600">
-                Technology changes too quickly to get comfortable.
+                {t("Technology changes too quickly to get comfortable.")}
               </p>
 
               <p className="mt-4 leading-relaxed text-zinc-600">
-                I enjoy learning new tools, exploring unfamiliar territory and
-                figuring things out along the way. Doing the same thing forever
-                probably wouldn&apos;t work for me anyway.
+                {t("I enjoy learning new tools, exploring unfamiliar territory and figuring things out along the way. Doing the same thing forever probably wouldn't work for me anyway.")}
               </p>
             </article>
           </div>
@@ -292,43 +280,37 @@ export default function AboutPage() {
       <section className="px-6 py-24 sm:px-10 sm:py-32 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">
-            04 — Beyond the labels
+            {t("04 — Beyond the labels")}
           </p>
 
           <div className="mt-12 grid gap-14 lg:grid-cols-[1fr_0.9fr] lg:gap-24">
             <h2 className="text-5xl font-medium leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
-              Designer.
+              {t("Designer.")}
               <br />
-              Developer.
+              {t("Developer.")}
               <br />
-              <span className="text-yellow-700">Technical mind.</span>
+              <span className="text-yellow-700">{t("Technical mind.")}</span>
               <br />
-              Still curious.
+              {t("Still curious.")}
             </h2>
 
             <div className="max-w-xl space-y-6 self-end text-base leading-relaxed text-zinc-600 sm:text-lg">
               <p>
-                I don&apos;t see my background as separate careers competing
-                with each other.
+                {t("I don't see my background as separate careers competing with each other.")}
               </p>
 
               <p>
-                Design gives me visual judgment. Technical work gives me
-                precision. Programming gives me the ability to turn ideas into
-                functional products.
+                {t("Design gives me visual judgment. Technical work gives me precision. Programming gives me the ability to turn ideas into functional products.")}
               </p>
 
-              <p>Together, they shape how I think.</p>
+              <p>{t("Together, they shape how I think.")}</p>
 
               <p>
-                I&apos;m comfortable moving between a visual problem and a
-                technical one, between an idea and its implementation, and
-                between what something should communicate and how it should
-                actually work.
+                {t("I'm comfortable moving between a visual problem and a technical one, between an idea and its implementation, and between what something should communicate and how it should actually work.")}
               </p>
 
               <p className="font-medium text-black">
-                That intersection is where I do my best work.
+                {t("That intersection is where I do my best work.")}
               </p>
             </div>
           </div>
@@ -339,26 +321,23 @@ export default function AboutPage() {
       <section className="bg-zinc-950 px-6 py-24 text-white sm:px-10 sm:py-32 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <p className="text-sm uppercase tracking-[0.2em] text-zinc-400">
-            05 — What&apos;s next
+            {t("05 — What's next")}
           </p>
 
           <div className="mt-12 grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24">
             <div>
               <h2 className="text-5xl font-medium leading-[0.95] tracking-tight text-yellow-500 sm:text-6xl lg:text-7xl">
-                Currently somewhere
+                {t("Currently somewhere")}
                 <br />
-                between an idea
+                {t("between an idea")}
                 <br />
-                and the next project.
+                {t("and the next project.")}
               </h2>
             </div>
 
             <div className="flex flex-col justify-end">
               <p className="max-w-xl text-base leading-relaxed text-zinc-300 sm:text-lg">
-                I&apos;m interested in working with agencies, studios, product
-                teams and people building thoughtful digital products —
-                especially where design and development need to speak the same
-                language.
+                {t("I'm interested in working with agencies, studios, product teams and people building thoughtful digital products — especially where design and development need to speak the same language.")}
               </p>
 
               <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-8">
@@ -375,7 +354,7 @@ export default function AboutPage() {
                     focus-visible:ring-offset-zinc-950
                   "
                 >
-                  View selected work
+                  {t("View selected work")}
                   <span
                     aria-hidden="true"
                     className="
@@ -403,7 +382,7 @@ export default function AboutPage() {
                     focus-visible:ring-offset-zinc-950
                   "
                 >
-                  Download resume
+                  {t("Download resume")}
                   <span
                     aria-hidden="true"
                     className="
@@ -420,8 +399,8 @@ export default function AboutPage() {
               </div>
 
               <div className="mt-14 border-t border-zinc-800 pt-6 text-sm text-zinc-400">
-                <p>Available for remote collaboration.</p>
-                <p className="mt-1">Argentina · Worldwide</p>
+                <p>{t("Available for remote collaboration.")}</p>
+                <p className="mt-1">{t("Argentina · Worldwide")}</p>
               </div>
             </div>
           </div>

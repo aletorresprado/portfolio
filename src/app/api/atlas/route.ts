@@ -3,6 +3,8 @@ import { Ratelimit } from "@upstash/ratelimit";
 import OpenAI from "openai";
 import { NextResponse } from "next/server";
 import { portfolioContext } from "@/data/portfolio-context";
+import { getLanguage } from "@/lib/i18n/server";
+import { translate } from "@/lib/i18n";
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -29,6 +31,8 @@ const MAX_USER_MESSAGES = 10;
 const MAX_CONTEXT_MESSAGES = 10;
 
 export async function POST(request: Request) {
+  const language = await getLanguage();
+  const t = (text: string) => translate(text, language);
   try {
     // Identify the visitor for rate limiting
     const forwardedFor = request.headers.get("x-forwarded-for");
@@ -45,7 +49,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           error:
-            "Atlas has reached the request limit for now. Please try again in a few minutes.",
+            t("Atlas has reached the request limit for now. Please try again in a few minutes."),
           reset,
         },
         { status: 429 }
@@ -58,7 +62,7 @@ export async function POST(request: Request) {
     // Validate the messages array
     if (!Array.isArray(messages) || messages.length === 0) {
       return NextResponse.json(
-        { error: "Messages are required." },
+        { error: t("Messages are required.") },
         { status: 400 }
       );
     }
@@ -73,7 +77,7 @@ export async function POST(request: Request) {
 
     if (!validMessages) {
       return NextResponse.json(
-        { error: "Invalid message format." },
+        { error: t("Invalid message format.") },
         { status: 400 }
       );
     }
@@ -88,7 +92,7 @@ export async function POST(request: Request) {
     if (hasOversizedUserMessage) {
       return NextResponse.json(
         {
-          error: `Messages are limited to ${MAX_MESSAGE_LENGTH} characters.`,
+          error: t(`Messages are limited to ${MAX_MESSAGE_LENGTH} characters.`),
         },
         { status: 400 }
       );
@@ -101,7 +105,7 @@ export async function POST(request: Request) {
 
     if (!latestUserMessage) {
       return NextResponse.json(
-        { error: "A visitor message is required." },
+        { error: t("A visitor message is required.") },
         { status: 400 }
       );
     }
@@ -109,7 +113,7 @@ export async function POST(request: Request) {
     // Prevent empty visitor messages
     if (!latestUserMessage.content.trim()) {
       return NextResponse.json(
-        { error: "The message cannot be empty." },
+        { error: t("The message cannot be empty.") },
         { status: 400 }
       );
     }
@@ -123,7 +127,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           error:
-            "You've reached the conversation limit. Please start a new conversation.",
+            t("You've reached the conversation limit. Please start a new conversation."),
         },
         { status: 429 }
       );
@@ -154,6 +158,7 @@ Use the professional portfolio context below as your source of truth.
 Do not invent information that is not supported by this context.
 
 Keep answers conversational and reasonably concise.
+Respond in ${language === "es" ? "Spanish" : "English"}, unless the visitor explicitly requests another language.
 
 ${portfolioContext}
       `,
@@ -172,7 +177,7 @@ ${portfolioContext}
     return NextResponse.json(
       {
         error:
-          "Atlas is temporarily unavailable. Please try again.",
+          t("Atlas is temporarily unavailable. Please try again."),
       },
       { status: 500 }
     );
