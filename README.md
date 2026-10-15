@@ -130,6 +130,12 @@ public/                           # Design assets, project imagery and résumé
 
 To adapt the content, start with the homepage and the pages under `src/app/work/`. Keep `src/data/portfolio-context.ts` aligned with the public portfolio so Atlas reflects the same professional information. Images and the résumé live in `public/`.
 
+## Languages
+
+The portfolio defaults to English. The ES / EN button switches the whole site, including project pages, navigation, metadata and Atlas, between English and Spanish. It sits between Contact and Available on desktop and to the left of the mobile menu button.
+
+The `portfolio-language` cookie remembers the choice for one year. Pages render in the selected language on the server; changing languages refreshes the current route without losing its URL. Spanish translations live in `src/lib/i18n/es.json`, keyed by the English source text. Technology and project names remain unchanged where appropriate. Add a dictionary entry when introducing new translatable content, and use `getTranslator()` in server components or `useLanguage()` in client components.
+
 ## Let's talk
 
 I'm open to remote opportunities and collaboration with agencies, design studios and development teams.

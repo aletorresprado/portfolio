@@ -1,3 +1,5 @@
+import { getLanguage, getTranslator } from "@/lib/i18n/server";
+import { LanguageProvider } from "@/components/LanguageProvider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -14,14 +16,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
+export async function generateMetadata(): Promise<Metadata> {
+  const language = await getLanguage();
+  const t = await getTranslator();
+  return {
   title: {
-    default: "Alejandro Torres — Designer × Developer",
+    default: t("Alejandro Torres — Designer × Developer"),
     template: "%s — Alejandro Torres",
   },
 
   description:
-    "Designer and developer focused on digital products, visual communication and software solutions. Available for remote opportunities and collaboration with agencies, studios and development teams.",
+    t("Designer and developer focused on digital products, visual communication and software solutions. Available for remote opportunities and collaboration with agencies, studios and development teams."),
 
   keywords: [
     "Alejandro Torres",
@@ -48,35 +53,39 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    locale: "en_US",
-    title: "Alejandro Torres — Designer × Developer",
+    locale: language === "es" ? "es_AR" : "en_US",
+    title: t("Alejandro Torres — Designer × Developer"),
     description:
-      "Design thinking, development skills and a technical mindset. Building digital products for agencies, studios and development teams.",
+      t("Design thinking, development skills and a technical mindset. Building digital products for agencies, studios and development teams."),
     siteName: "Alejandro Torres",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Alejandro Torres — Designer × Developer",
+    title: t("Alejandro Torres — Designer × Developer"),
     description:
-      "Designer and developer building digital products and visual experiences.",
+      t("Designer and developer building digital products and visual experiences."),
   },
 
   robots: {
     index: true,
     follow: true,
   },
-};
+  };
+}
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const language = await getLanguage();
   return (
     <html
-      lang="en"
+      lang={language}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {children}
-        <AtlasChat />
+        <LanguageProvider initialLanguage={language}>
+          {children}
+          <AtlasChat />
+        </LanguageProvider>
         <GoogleAnalytics gaId="G-03LJ5PFFM6" />
       </body>
     </html>

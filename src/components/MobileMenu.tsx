@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/components/LanguageProvider";
+
 import { useEffect, useState } from "react";
 
 const menuItems = [
@@ -10,6 +12,7 @@ const menuItems = [
 ];
 
 export default function MobileMenu() {
+  const { t } = useLanguage();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -40,7 +43,7 @@ export default function MobileMenu() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        aria-label="Open menu"
+        aria-label={t("Open menu")}
         aria-expanded={open}
         className=" flex size-11 items-center justify-center rounded-lg bg-yellow-700 md:hidden
                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black
@@ -55,7 +58,7 @@ export default function MobileMenu() {
      <div
   role="dialog"
   aria-modal="true"
-  aria-label="Main navigation"
+  aria-label={t("Main navigation")}
   className={`fixed inset-0 z-50 bg-zinc-950 text-white transition-all duration-500 md:hidden ${
     open
       ? "pointer-events-auto opacity-100"
@@ -73,7 +76,7 @@ export default function MobileMenu() {
             <button
               type="button"
               onClick={() => setOpen(false)}
-              aria-label="Close menu"
+              aria-label={t("Close menu")}
               className=" flex size-11 items-center justify-center rounded-lg bg-yellow-500 text-black
                           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white
                           focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
@@ -96,7 +99,7 @@ export default function MobileMenu() {
                     className="group flex items-center justify-between py-6"
                   >
                     <span className="text-4xl font-medium tracking-tight transition-colors group-hover:text-yellow-500 sm:text-5xl">
-                      {item.label}
+                      {t(item.label)}
                     </span>
 
                     <span className="text-sm text-zinc-600">
@@ -111,7 +114,7 @@ export default function MobileMenu() {
           {/* Footer */}
           <div className="flex items-end justify-between border-t border-zinc-800 pt-6">
             <p className="text-sm text-zinc-500">
-              Designer × Developer
+              {t("Designer × Developer")}
             </p>
 
             <div className="size-3 rounded-full bg-yellow-500" />

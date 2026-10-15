@@ -1,9 +1,12 @@
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { getTranslator } from "@/lib/i18n/server";
 import Link from "next/link";
 import MobileMenu from "@/components/MobileMenu";
 import Reveal from "@/components/Reveal";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
+  const t = await getTranslator();
   return (
     <main className="min-h-screen bg-white text-black">
       <section
@@ -26,40 +29,41 @@ export default function Home() {
         Alejandro Torres
       </a>
 
-  <nav className="hidden items-center gap-8 text-sm text-zinc-500 md:flex">
+  <nav className="hidden items-center gap-4 text-sm text-zinc-500 md:flex lg:gap-8">
     <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-4"
   href="#work">
-      Work
+      {t("Work")}
     </a>
 
     <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-4"
    href="#capabilities">
-      Capabilities
+      {t("Capabilities")}
     </a>
 
      <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-4"
    href="#about">
-      About
+      {t("About")}
     </a>
 
     <a className=" cursor-pointer transition-all duration-200 hover:text-black hover:font-semibold
   focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500 focus-visible:ring-offset-4"
    href="#contact">
-      Contact
+      {t("Contact")}
     </a>
   </nav>
 
-  <div className="flex items-center">
+  <div className="flex items-center gap-3 lg:gap-6">
+  <LanguageSwitcher />
   <div className="hidden items-center gap-2 text-sm md:flex">
     <span aria-hidden="true" className="relative flex size-2">
       <span className="absolute inline-flex size-full motion-safe:animate-ping rounded-full bg-emerald-400 opacity-75" />
       <span className="relative inline-flex size-2 rounded-full bg-emerald-500" />
     </span>
 
-    <span>Available</span>
+    <span>{t("Available")}</span>
   </div>
 
   <MobileMenu />
@@ -68,28 +72,27 @@ export default function Home() {
 
         <div className="max-w-6xl">
           <p className="mb-6 text-sm uppercase tracking-[0.3em] text-zinc-500">
-            Remote · Argentina
+            {t("Remote · Argentina")}
           </p>
 
           <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl 
            text-yellow-700">
-            I design.
+            {t("I design.")}
             <br />
-            I develop.
+            {t("I develop.")}
             <br />
-            I solve.
+            {t("I solve.")}
           </h1>
 
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-zinc-600 sm:text-xl">
-            I design visual experiences and build digital solutions
-            for agencies, studios and product teams.
+            {t("I design visual experiences and build digital solutions for agencies, studios and product teams.")}
           </p>
         </div>
 
         <footer className="flex flex-col gap-4 border-t border-zinc-200 pt-6 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>Graphic Design · Frontend · Full Stack · UI · AI</p>
+          <p>{t("Graphic Design · Frontend · Full Stack · UI · AI")}</p>
 
-          <p>Available for remote work</p>
+          <p>{t("Available for remote work")}</p>
         </footer>
       </section>
       <section
@@ -101,19 +104,18 @@ export default function Home() {
     <div className="mb-16 flex flex-col justify-between gap-6 md:flex-row md:items-end">
       <div>
         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-          01 — Selected Work
+          {t("01 — Selected Work")}
         </p>
 
         <h2 className="text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl  text-yellow-700">
-          Work that solves
+          {t("Work that solves")}
           <br />
-          real problems.
+          {t("real problems.")}
         </h2>
       </div>
 
       <p className="max-w-sm text-sm leading-relaxed text-zinc-500">
-        Selected projects across development, digital products and visual
-        communication.
+        {t("Selected projects across development, digital products and visual communication.")}
       </p>
     </div>
 
@@ -137,14 +139,13 @@ export default function Home() {
 
   <div>
     <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
-      Restaurant
+      {t("Restaurant")}
       <br />
-      Reservation Platform
+      {t("Reservation Platform")}
     </h3>
 
     <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
-      Reservation and management platform designed for a restaurant
-      operation with multiple branches.
+      {t("Reservation and management platform designed for a restaurant operation with multiple branches.")}
     </p>
 
     <div className="mt-8 flex items-end justify-between gap-6">
@@ -174,7 +175,7 @@ export default function Home() {
   >
     <div className="mb-20 flex items-start justify-between">
       <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-        Web Development
+        {t("Web Development")}
       </span>
 
       <span className="text-xs text-zinc-500">
@@ -191,14 +192,13 @@ export default function Home() {
           group-focus-visible:translate-x-2
         "
       >
-        Digital
+        {t("Digital")}
         <br />
-        Experiences
+        {t("Experiences")}
       </h3>
 
       <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
-        Design and development of modern web experiences from concept to
-        production.
+        {t("Design and development of modern web experiences from concept to production.")}
       </p>
 
       <div className="mt-8 flex items-end justify-between gap-6">
@@ -229,17 +229,16 @@ export default function Home() {
       >
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-            Mobile Development
+            {t("Mobile Development")}
           </span>
-          <span className="text-xs text-zinc-400">2026 · In development</span>
+          <span className="text-xs text-zinc-400">{t("2026 · In development")}</span>
         </div>
         <div>
           <h3 className="text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
-            Weather<br />App
+            {t("Weather")}<br />{t("App")}
           </h3>
           <p className="mt-5 max-w-md leading-relaxed text-zinc-500">
-            A mobile weather-awareness app exploring location-based forecasts,
-            atmospheric conditions and experimental environmental alerts.
+            {t("A mobile weather-awareness app exploring location-based forecasts, atmospheric conditions and experimental environmental alerts.")}
           </p>
           <div className="mt-8 flex items-end justify-between gap-6">
             <p className="text-sm text-zinc-400">
@@ -260,24 +259,24 @@ export default function Home() {
     focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-yellow-500">
         <div className="mb-20 flex items-start justify-between">
           <span className="text-xs uppercase tracking-[0.2em]  text-zinc-400">
-            Graphic Design
+            {t("Graphic Design")}
           </span>
 
           <span className="text-xs text-zinc-500">
-            Archive
+            {t("Archive")}
           </span>
         </div>
 
         <div>
           <h3 className=" text-yellow-500 text-3xl font-medium tracking-tight transition-transform duration-300 group-hover:translate-x-2">
-  Graphic Design
+  {t("Graphic Design")}
   <br />
-  Archive
+  {t("Archive")}
 </h3>
 
          <div className="mt-8 flex items-end justify-between gap-6">
   <p className="text-sm text-zinc-500">
-    Branding · Editorial · Digital · Visual Communication
+    {t("Branding · Editorial · Digital · Visual Communication")}
   </p>
 
   <span className="text-xl transition-transform duration-300 group-hover:translate-x-1">
@@ -298,15 +297,15 @@ export default function Home() {
     <Reveal>
     <div className="mb-20">
       <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-        02 — Capabilities
+        {t("02 — Capabilities")}
       </p>
 
       <h2 className="max-w-4xl text-4xl font-medium tracking-tight sm:text-5xl md:text-6xl lg:text-7xl  text-yellow-500">
-        Design thinking.
+        {t("Design thinking.")}
         <br />
-        Development skills.
+        {t("Development skills.")}
         <br />
-        Technical mindset.
+        {t("Technical mindset.")}
       </h2>
     </div>
     </Reveal>
@@ -358,16 +357,16 @@ export default function Home() {
           <span className="text-sm text-zinc-500">03</span>
 
           <h3 className="mt-3 text-xl font-medium">
-            Design
+            {t("Design")}
           </h3>
         </div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-3 text-xl text-zinc-300 sm:text-2xl md:text-3xl">
-          <span>Graphic Design</span>
-          <span>Brand Identity</span>
-          <span>UI Design</span>
+          <span>{t("Graphic Design")}</span>
+          <span>{t("Brand Identity")}</span>
+          <span>{t("UI Design")}</span>
           <span>Editorial</span>
-          <span>Visual Communication</span>
+          <span>{t("Visual Communication")}</span>
         </div>
       </div>
 
@@ -377,7 +376,7 @@ export default function Home() {
           <span className="text-sm text-zinc-500">04</span>
 
           <h3 className="mt-3 text-xl font-medium">
-            Tools & Technology
+            {t("Tools & Technology")}
           </h3>
         </div>
 
@@ -386,8 +385,8 @@ export default function Home() {
           <span>GitHub</span>
           <span>Docker</span>
           <span>WSL / Linux</span>
-          <span>AI Integration</span>
-          <span>Automation</span>
+          <span>{t("AI Integration")}</span>
+          <span>{t("Automation")}</span>
         </div>
       </div>
 
@@ -404,15 +403,15 @@ export default function Home() {
     <Reveal y={18}>
       <div>
         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-          03 — About
+          {t("03 — About")}
         </p>
 
         <p className="max-w-xs text-sm leading-relaxed text-zinc-500">
-          Designer by training.
+          {t("Designer by training.")}
           <br />
-          Developer by evolution.
+          {t("Developer by evolution.")}
           <br />
-          Technical by nature.
+          {t("Technical by nature.")}
         </p>
 
         <div className="mt-8 flex flex-col items-start gap-5">
@@ -430,7 +429,7 @@ export default function Home() {
               focus-visible:ring-offset-4
             "
           >
-            More about me
+            {t("More about me")}
 
             <span
               aria-hidden="true"
@@ -459,7 +458,7 @@ export default function Home() {
               focus-visible:ring-offset-4
             "
           >
-            View Resume
+            {t("View Resume")}
 
             <span
               aria-hidden="true"
@@ -481,24 +480,22 @@ export default function Home() {
     <Reveal y={18} delay={0.08}>
       <div>
         <h2 className="max-w-4xl text-4xl font-medium leading-tight tracking-tight sm:text-5xl md:text-6xl">
-          Different disciplines.
+          {t("Different disciplines.")}
           <br />
           <span className="text-yellow-700">
-            One way of thinking.
+            {t("One way of thinking.")}
           </span>
         </h2>
 
         <p className="mt-10 max-w-2xl text-lg leading-relaxed text-zinc-600">
-          A multidisciplinary background shaped by design, technology,
-          science and code — bringing visual thinking and technical
-          problem-solving into the same creative process.
+          {t("A multidisciplinary background shaped by design, technology, science and code — bringing visual thinking and technical problem-solving into the same creative process.")}
         </p>
 
         <div className="mt-12 flex flex-wrap gap-x-8 gap-y-3 border-t border-zinc-200 pt-8 text-sm text-zinc-500">
-          <span>Design</span>
-          <span>Development</span>
-          <span>Technology</span>
-          <span>Scientific background</span>
+          <span>{t("Design")}</span>
+          <span>{t("Development")}</span>
+          <span>{t("Technology")}</span>
+          <span>{t("Scientific background")}</span>
         </div>
       </div>
     </Reveal>
@@ -516,18 +513,17 @@ export default function Home() {
       <Reveal y={18}>
   <div>
     <p className="mb-4 text-sm uppercase tracking-[0.3em] text-zinc-500">
-      04 — Contact
+      {t("04 — Contact")}
     </p>
 
     <h2 className="max-w-5xl text-5xl font-medium leading-[0.95] tracking-tight text-yellow-500 sm:text-6xl md:text-7xl lg:text-8xl">
-      Let&apos;s build
+      {t("Let's build")}
       <br />
-      something useful.
+      {t("something useful.")}
     </h2>
 
     <p className="mt-8 max-w-xl text-lg leading-relaxed text-zinc-400">
-      Available for remote opportunities and collaboration with agencies,
-      design studios and development teams.
+      {t("Available for remote opportunities and collaboration with agencies, design studios and development teams.")}
     </p>
   </div>
 </Reveal>
@@ -541,7 +537,7 @@ export default function Home() {
           >
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
-                Email
+                {t("Email")}
               </p>
               <p className="mt-2 text-lg">
                 positivoweb@gmail.com
@@ -584,7 +580,7 @@ export default function Home() {
                 GitHub
               </p>
               <p className="mt-2 text-lg">
-                Code & Projects
+                {t("Code & Projects")}
               </p>
             </div>
 
@@ -601,7 +597,7 @@ export default function Home() {
             <span className="relative inline-flex size-2 rounded-full bg-emerald-500"></span>
           </span>
 
-          <span>Available for remote work</span>
+          <span>{t("Available for remote work")}</span>
         </div>
       </div>
     </div>
@@ -612,7 +608,7 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <a
               href="#home"
-              aria-label="Back to top"
+              aria-label={t("Back to top")}
               className="
                 shrink-0 cursor-pointer rounded-xl
                 transition-transform duration-300
@@ -635,7 +631,7 @@ export default function Home() {
             </a>
 
             <p className="text-sm text-zinc-400">
-              Desarrollo:{" "}
+              {t("Development:")}{" "}
               <span className="font-medium text-white">
                 Alejandro Torres
               </span>

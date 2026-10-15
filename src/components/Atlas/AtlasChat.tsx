@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/components/LanguageProvider";
+
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 
@@ -58,6 +60,7 @@ function renderMessageContent(content: string) {
 }
 
 export default function AtlasChat() {
+  const { t } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -104,7 +107,7 @@ export default function AtlasChat() {
 
       if (!response.ok) {
         throw new Error(
-          data.error || "Atlas is temporarily unavailable."
+          t(data.error || "Atlas is temporarily unavailable.")
         );
       }
 
@@ -120,8 +123,8 @@ export default function AtlasChat() {
     } catch (error) {
       const message =
         error instanceof Error
-          ? error.message
-          : "Atlas is temporarily unavailable.";
+          ? t(error.message)
+          : t("Atlas is temporarily unavailable.");
 
       setMessages((currentMessages) => [
         ...currentMessages,
@@ -168,9 +171,9 @@ export default function AtlasChat() {
               />
 
               <div>
-                <p className="text-sm font-medium">Atlas</p>
+                <p className="text-sm font-medium">{t("Atlas")}</p>
                 <p className="text-xs text-zinc-500">
-                  Portfolio assistant
+                  {t("Portfolio assistant")}
                 </p>
               </div>
             </div>
@@ -178,7 +181,7 @@ export default function AtlasChat() {
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              aria-label="Close Atlas"
+              aria-label={t("Close Atlas")}
               className="
                 flex size-9 items-center justify-center
                 rounded-full text-zinc-400
@@ -198,16 +201,15 @@ export default function AtlasChat() {
             {messages.length === 0 && (
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-yellow-500">
-                  Ask Atlas
+                  {t("Ask Atlas")}
                 </p>
 
                 <h2 className="mt-3 text-2xl font-medium tracking-tight">
-                  Curious about Alejandro?
+                  {t("Curious about Alejandro?")}
                 </h2>
 
                 <p className="mt-3 text-sm leading-relaxed text-zinc-400">
-                  Ask me about his work, projects, technologies,
-                  design background or technical experience.
+                  {t("Ask me about his work, projects, technologies, design background or technical experience.")}
                 </p>
 
                 <div className="mt-6 flex flex-col gap-2">
@@ -215,7 +217,7 @@ export default function AtlasChat() {
                     <button
                       key={suggestion}
                       type="button"
-                      onClick={() => void sendMessage(suggestion)}
+                      onClick={() => void sendMessage(t(suggestion))}
                       className="
                         rounded-xl border border-zinc-800
                         px-4 py-3 text-left text-sm
@@ -229,7 +231,7 @@ export default function AtlasChat() {
                         focus-visible:ring-yellow-500
                       "
                     >
-                      {suggestion}
+                      {t(suggestion)}
                     </button>
                   ))}
                 </div>
@@ -262,7 +264,7 @@ export default function AtlasChat() {
                 {isLoading && (
                   <div className="flex items-center gap-2 text-sm text-zinc-500">
                     <span className="size-1.5 animate-pulse rounded-full bg-yellow-500" />
-                    <span>Atlas is thinking...</span>
+                    <span>{t("Atlas is thinking...")}</span>
                   </div>
                 )}
 
@@ -280,7 +282,7 @@ export default function AtlasChat() {
               <textarea
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
-                placeholder="Ask about Alejandro..."
+                placeholder={t("Ask about Alejandro...")}
                 rows={1}
                 maxLength={MAX_MESSAGE_LENGTH}
                 disabled={isLoading}
@@ -297,7 +299,7 @@ export default function AtlasChat() {
               <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
-                aria-label="Send message"
+                aria-label={t("Send message")}
                 className="
                   flex size-10 shrink-0 items-center
                   justify-center rounded-lg
@@ -316,7 +318,7 @@ export default function AtlasChat() {
             </div>
 
             <div className="mt-2 flex justify-between px-1 text-[10px] text-zinc-600">
-              <span>AI portfolio assistant</span>
+              <span>{t("AI portfolio assistant")}</span>
               <span>
                 {input.length}/{MAX_MESSAGE_LENGTH}
               </span>
@@ -330,7 +332,7 @@ export default function AtlasChat() {
         type="button"
         onClick={() => setIsOpen((current) => !current)}
         aria-expanded={isOpen}
-        aria-label={isOpen ? "Close Atlas" : "Ask Atlas"}
+        aria-label={t(isOpen ? "Close Atlas" : "Ask Atlas")}
         className="
           group ml-auto flex items-center gap-3
           rounded-full bg-black
@@ -350,7 +352,7 @@ export default function AtlasChat() {
         </span>
 
         <span className="text-sm font-medium">
-          {isOpen ? "Close" : "Ask Atlas"}
+          {t(isOpen ? "Close" : "Ask Atlas")}
         </span>
 
         {!isOpen && (
